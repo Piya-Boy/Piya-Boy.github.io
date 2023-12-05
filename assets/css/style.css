@@ -414,15 +414,20 @@ section {
   margin-bottom: 20px;
   display: flex;
   align-items: center;
-  color: #666464;
+  color: #6f6d6d;
 }
 
 .about .content ul strong {
   margin-right: 10px;
+  font-size: 13px;
+}
+
+.about .content ul  span {
+  font-size: 12px;
 }
 
 .about .content ul i {
-  font-size: 16px;
+  font-size: 12px;
   margin-right: 5px;
   color: #0563bb;
   line-height: 0;
@@ -431,6 +436,47 @@ section {
 .about .content p:last-child {
   margin-bottom: 0;
 }
+
+.about .card .card-header {
+  padding: 0;
+  margin-bottom: 0;
+  background: transparent;
+}
+
+.about .card .card-header .dot {
+  background: #D8DCE2;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  transition: all .25s ease-in-out;
+}
+
+.about .card .card-header .dot:not(:nth-child(1)) {
+  margin-left: 4px;
+}
+/* Colors for dots */
+
+.about .card .card-header .dot:nth-child(1) {
+  background: #DD333F;
+}
+
+.about .card .card-header .dot:nth-child(2) {
+  background: #F5D76E;
+}
+
+.about .card .card-header .dot:nth-child(3) {
+  background: #5FDD68;
+}
+
+.about .card .cli-control span {
+  color: #aeb1b4;
+  font-size: 13px;
+
+}
+
 
 /*--------------------------------------------------------------
 # Facts
