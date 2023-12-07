@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>I'm Piya Miang-Lae</title>
+  <meta content name="description">
+  <meta content name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/Fontawesome/css/all.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <button type="button" class="mobile-nav-toggle d-xl-none"><i
+      class="bi bi-list mobile-nav-toggle fa-beat"></i></button>
+  <!-- <i class="bi bi-list mobile-nav-toggle d-lg-none fa-beat"></i> -->
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex flex-column justify-content-center">
+
+    <nav id="navbar" class="navbar nav-menu">
+      <ul>
+        <li><a href="../index.html" class="nav-link scrollto "><i class="fa-solid fa-circle-chevron-left fa-beat"></i>
+            <span>Back</span></a>
+        </li>
+        <!-- <li><a href="#about" class="nav-link scrollto"><i class="fas fa-user fa-beat"></i> <span>About</span></a></li>
+        <li><a href="#resume" class="nav-link scrollto"><i class="fas fa-file fa-beat"></i> <span>Resume</span></a></li>
+        <li><a href="#portfolio" class="nav-link scrollto"><i class="fas fa-images fa-beat"></i>
+            <span>Portfolio</span></a></li> -->
+        <!-- <li><a href="#services" class="nav-link scrollto"><i class="fas fa-briefcase fa-beat"></i>
+            <span>Services</span></a></li> -->
+        <!-- <li><a href="#contact" class="nav-link scrollto"><i class="fas fa-envelope fa-beat"></i>
+            <span>Contact</span></a></li> -->
+        <li><a href="java.html" class="nav-link scrollto active"><i class="fa-brands fa-js fa-beat"></i>
+            <span>JavaScript</span></a></li>
+        <li><a href="api.html" class="nav-link scrollto"><i class="fa-solid fa-code fa-beat"></i> <span>API</span></a>
+        </li>
+      </ul>
+    </nav><!-- .nav-menu -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center">
+    <div class="container" data-aos="zoom-in" data-aos-delay="100">
+      <div class="d-flex">
+        <p>
+        <h1><strong class="typeds text-muted" data-typed-items="JavaScript"></strong></h1>
+        </p>
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <section>
+      <div class="container" data-aos="fade-up">
+        <div class="row  d-flex justify-content-center">
+          <div class="col-lg-6 mb-3">
+            <div class="card">
+              <div class="card-header">
+                <div class="section-title">
+                  <h2>English Letters</h2>
+                </div>
+                <div class="card-body">
+                  <div class="text-center">
+                    <div id="res-letter"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 mb-3">
+              <div class="card">
+                <div class="card-header">
+                  <div class="section-title">
+                    <h2>
+                      Factorial
+                    </h2>
+                  </div>
+                  <div class="card-body">
+                    <label for="input-factorial">Enter a number</label>
+                    <input type="number" class="form-control" id="input-factorial" placeholder="Enter a number">
+                    <div class="text-center">
+
+                      <div id="res-factorial">0</div>
+                    </div>
+                    <button onclick="factorial()" class="btn btn-primary">Factorial</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 mb-3">
+              <div class="card">
+                <div class="card-header">
+                  <div class="section-title">
+                    <h2>Day to Seconds</h2>
+                  </div>
+                  <div class="card-body">
+                    <label for="input-days">Enter number of days</label>
+                    <input type="number" class="form-control" id="input-days" placeholder="Enter number of days">
+                    <div class="text-center">
+                      <div id="res-days">0</div>
+                    </div>
+                    <button onclick="daysToSeconds()" class="btn btn-primary">Convert</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 mb-3">
+              <div class="card">
+                <div class="card-header">
+                  <div class="section-title">
+                    <h2>Login</h2>
+                  </div>  
+                  <div class="card-body">
+                    <form id="login-form">
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" id="username" placeholder="Enter username">
+                          </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Enter password">
+                          </div>
+                        </div>
+                        <div class="mt-3">
+                          <button type="button" class="btn btn-primary" onclick="login()">Login</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 mb-3">
+              <div class="card">
+                <div class="card-header">
+                  <div class="section-title">
+                    <h2>
+                      To Do
+                    </h2>
+                  </div>
+                  <div class="card-body">
+                    <form >
+                      <div class="row">
+                        <div class="col-10">
+                          <div class="form-group">
+                            <label for="task">Task</label>
+                            <input type="text" class="form-control" id="task" placeholder="Enter task">
+                          </div>
+                        </div>
+                        <div class="col-2">
+                          <button type="button" class="btn btn-primary mt-4" onclick="addTodo()">Add</button>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12">
+                          <ul class="list-group mt-2">
+                            <div id="res-todo"></div>
+                          </ul>
+                          </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <h3>Mr.Piya Miang-Lae</h3>
+      <p>
+        I'm a Full Stack Web Developer with specialized skills in both
+        back-end and front-end development.
+      </p>
+      <div class="social-links">
+        <div class="social-links">
+          <a href="https://www.facebook.com/piya.boyman" target="_blank" class="facebook"><i
+              class="fa-brands fa-facebook fa-beat"></i></a>
+          <a href="https://www.instagram.com/mr_piya_miang_lae/" target="_blank" class="instagram"><i
+              class="fa-brands fa-instagram fa-beat"></i></a>
+          <a href="https://github.com/Piya-Boy/Piya-Boy" target="_blank" class="github"><i
+              class="fa-brands fa-github fa-beat"></i></a>
+          <a href="#" class="linkedin"><i class="fa-brands fa-linkedin fa-beat"></i></a>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; Copyright <strong><span>Mr.Piya Miang-Lae</span></strong>. All
+        Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a href="https://github.com/Piya-Boy/Piya-Boy" target="_blank">Mr.Piya Miang-Lae</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="fa-sharp fa-solid fa-chevron-up fa-beat"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/lab.js"></script>
+
+</body>
+
+</html>
