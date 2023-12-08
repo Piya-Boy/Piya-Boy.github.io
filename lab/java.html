@@ -190,7 +190,7 @@
                       <div class="row">
                         <div class="col-12">
                           <ul class="list-group mt-2">
-                            <div id="res-todo"></div>
+                            <div id="res-todo" class=""></div>
                           </ul>
                           </div>
                       </div>
@@ -200,7 +200,45 @@
               </div>
             </div>
           </div>
+
         </div>
+    </section>
+
+    <!-- chart section -->
+
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 mb-3">
+            <div class="card">
+              <div class="card-header">
+                <div class="section-title">
+                  <h2>My Skills</h2>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex justify-content-center">
+                    <canvas id="myskills" ></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="card-header">
+                <div class="section-title">
+                  <h2>Data USA</h2>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex justify-content-center">
+                    <canvas id="datausa"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
   </main><!-- End #main -->
@@ -248,10 +286,19 @@
   <script src="../assets/vendor/typed.js/typed.umd.js"></script>
   <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="../assets/vendor/php-email-form/validate.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 
   <!-- Template Main JS File -->
   <script src="../assets/js/main.js"></script>
   <script src="../assets/js/lab.js"></script>
+
+  <script>
+    skills();
+printletter();
+dataUSA();
+
+  </script>
 
 </body>
 

@@ -15,7 +15,6 @@ const printletter = () => {
     }
 }
 
-printletter();
 
 // Factorial
 const factorial = () => {
@@ -85,14 +84,17 @@ const printTodo = (list) => {
     }
     document.getElementById('res-todo').innerHTML = res;
 }
-
 const editTodo = (index) => {
     const newValue = prompt("Edit the to-do item:", todolis[index]);
     if (newValue !== null) {
         todolis[index] = newValue;
         printTodo(); // Refresh the displayed list after editing
+    } else {
+        // ไ
+        return;
     }
 }
+
 
 const deleteTodo = (index) => {
     if (window.todolis && window.todolis.length > index && index >= 0) {
@@ -100,3 +102,106 @@ const deleteTodo = (index) => {
         printTodo();
     }
 }
+
+// skills chart function
+const skills = () => {
+    var chart = document.getElementById('myskills');
+        var data ={
+            names: ["HTML", "CSS","SCSS", "JavaScript","Bootstrap", "JQuery","Tailwind","PHP", "MySQL","Python","C", "VBA","DART"],
+            levels: [100, 70,70, 75,95,90,55, 100, 97,70,40,50,30]
+    }
+    
+    // color random
+    var o = Math.round, r = Math.random, s = 255;
+
+    // fetch data from array
+    // var ctx = document.getElementById('myskills').getContext('2d');
+    var myChart = new Chart(chart, {
+        type: 'line',
+        data: {
+            labels: data.names,
+            datasets: [{
+                label: 'My Skills',
+                data: data.levels,
+                backgroundColor: function () {
+                    return 'rgb(' + o(r() * s) + ',' + o(r() * s) + ',' + o(r() * s) + ',0.4)';
+                },
+             
+                borderWidth: 0
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+}
+
+
+// Data USA
+const dataUSA = () => {
+    var ctx = document.getElementById('datausa');
+    fetch('https://datausa.io/api/data?drilldowns=Nation&measures=Population')
+        .then(response => response.json())
+        .then(data => {
+            // Assuming the API response structure has "data" as an array of objects
+            const populationData = data.data.map(item => ({
+                population: item.Population,
+                year: item.Year
+            }));
+
+            // console.log(populationData);
+
+            const labels = populationData.map(item => item.year); 
+            const datas = populationData.map(item => item.population);
+            var o = Math.round, r = Math.random, s = 255;
+            var myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Population',
+                        data: datas,
+                        backgroundColor: function () {
+                            return 'rgb(' + o(r() * s) + ',' + o(r() * s) + ',' + o(r() * s) + ',0.4)';
+                        },
+                        borderWidth: 0
+                    }]
+                },
+            })
+            
+        })
+        .catch(error => {
+            console.log('Error fetching data:', error);
+        });
+
+}
+
+
+/*
+========================================
+API
+========================================
+*/
+const randomImg = () => {
+    const imgElement = document.getElementById('image');
+
+    fetch('https://dog.ceo/api/breeds/image/random')
+        .then(response => response.json())
+        .then(data => {
+            const imageUrl = data.message;
+
+            // console.log(imageUrl);
+
+            imgElement.src = imageUrl;
+            imgElement.alt = 'random dog image';
+        })
+        .catch(error => {
+            console.log('Error fetching dog image:', error);
+        });
+};
+
+
