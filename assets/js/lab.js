@@ -74,7 +74,7 @@ const printTodo = (list) => {
 
     console.log(todolis);
 
-   
+
     var res = "";
     // Show all todo list items
     for (let i = 0; i < todolis.length; i++) {
@@ -106,11 +106,11 @@ const deleteTodo = (index) => {
 // skills chart function
 const skills = () => {
     var chart = document.getElementById('myskills');
-        var data ={
-            names: ["HTML", "CSS","SCSS", "JavaScript","Bootstrap", "JQuery","Tailwind","PHP", "MySQL","Python","C", "VBA","DART"],
-            levels: [100, 70,70, 75,95,90,55, 100, 97,70,40,50,30]
+    var data = {
+        names: ["HTML", "CSS", "SCSS", "JavaScript", "Bootstrap", "JQuery", "Tailwind", "PHP", "MySQL", "Python", "C", "VBA", "DART"],
+        levels: [100, 70, 70, 75, 95, 90, 55, 100, 97, 70, 40, 50, 30]
     }
-    
+
     // color random
     var o = Math.round, r = Math.random, s = 255;
 
@@ -126,8 +126,8 @@ const skills = () => {
                 backgroundColor: function () {
                     return 'rgb(' + o(r() * s) + ',' + o(r() * s) + ',' + o(r() * s) + ',0.4)';
                 },
-             
-                borderWidth: 0
+
+                borderWidth: 3
             }]
         },
         options: {
@@ -155,7 +155,7 @@ const dataUSA = () => {
 
             // console.log(populationData);
 
-            const labels = populationData.map(item => item.year); 
+            const labels = populationData.map(item => item.year);
             const datas = populationData.map(item => item.population);
             var o = Math.round, r = Math.random, s = 255;
             var myChart = new Chart(ctx, {
@@ -172,7 +172,7 @@ const dataUSA = () => {
                     }]
                 },
             })
-            
+
         })
         .catch(error => {
             console.log('Error fetching data:', error);
@@ -188,13 +188,11 @@ API
 */
 const randomImg = () => {
     const imgElement = document.getElementById('image');
-fetch('https://api.coinbase.com/v2/exchange-rates?currency=USDT')
-  .then(response => response.json())
-  .then(data => {
-    console.log(data);
+    fetch('https://dog.ceo/api/breeds/image/random')
+        .then(response => response.json())
+        .then(data => {
+            // console.log(data);
             const imageUrl = data.message;
-
-            // console.log(imageUrl);
 
             imgElement.src = imageUrl;
             imgElement.alt = 'random dog image';
@@ -212,7 +210,7 @@ const fetchPrices = () => {
     fetch('https://api.coinbase.com/v2/exchange-rates?currency=USDT')
         .then(response => response.json())
         .then(data => {
-            console.log(data);
+            // console.log(data);
             displayPrices(data);
             displayUpdateTime(date);
         })
@@ -232,25 +230,58 @@ const displayPrices = (data) => {
 
     let pricesHtml = '<p>Current Prices</p> <ul>';
 
-      currencies.forEach(currency => {
+    currencies.forEach(currency => {
         if (rates[currency]) {
             pricesHtml += `<li>${currency}: ${rates[currency]}</li>`;
         } else {
             pricesHtml += `<li>${currency}: N/A</li>`;
         }
-      });
+    });
 
-        pricesHtml += '</ul>';
+    pricesHtml += '</ul>';
     usdt.innerHTML = pricesHtml;
 }
-
-
 
 const displayUpdateTime = (date) => {
     const updatetime = document.getElementById('updatetime');
     updatetime.innerText = date;
 }
 
+const nationality = () => {
+    const name = document.getElementById('names');
+    let namess = document.getElementById('namess').value;
+    const nationalityTable = document.getElementById('nationality');
+
+    if (namess !== "") {
+        fetch(`https://api.nationalize.io/?name=${namess}`)
+            .then(response => response.json())
+            .then(data => {
+                // console.log(data); 
+              if(data.country.length > 0){
+                  nationalityTable.innerHTML = ''; // Clear previous results
+                  data.country.forEach(country => {
+                      const row = `<tr><td>${country.country_id}</td><td>${country.probability}</td></tr>`;
+                      nationalityTable.innerHTML += row;
+                  }
+                  );
+            }else{
+                const nationalityTable = document.getElementById('nationality');
+                nationalityTable.innerHTML = `<tr><td colspan="2" class="text-center">data not found</td></tr>`;
+            }
+              
+                name.innerText = 'Your name is ' + namess;
+
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+                name.innerText = 'Sorry, something went wrong. Please try again.';
+            });
+    } else {
+        name.innerText = 'Please enter a name';
+        nationalityTable.innerHTML = '';
+    }
+    namess.value = '';
+}
 
 
 
