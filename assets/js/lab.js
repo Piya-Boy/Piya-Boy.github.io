@@ -188,10 +188,10 @@ API
 */
 const randomImg = () => {
     const imgElement = document.getElementById('image');
-
-    fetch('https://dog.ceo/api/breeds/image/random')
-        .then(response => response.json())
-        .then(data => {
+fetch('https://api.coinbase.com/v2/exchange-rates?currency=USDT')
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
             const imageUrl = data.message;
 
             // console.log(imageUrl);
@@ -203,5 +203,54 @@ const randomImg = () => {
             console.log('Error fetching dog image:', error);
         });
 };
+
+const fetchPrices = () => {
+
+    const now = new Date();
+    const date = now.toLocaleTimeString();
+
+    fetch('https://api.coinbase.com/v2/exchange-rates?currency=USDT')
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            displayPrices(data);
+            displayUpdateTime(date);
+        })
+        .catch(error => {
+            console.log('Error fetching prices:', error);
+        })
+}
+
+const displayPrices = (data) => {
+    const usdt = document.getElementById('usdt');
+
+
+    const rates = data.data.rates;
+
+
+    var currencies = ['1INCH', 'AAVE', 'ABT', 'ACH', 'ACS', 'ADA', 'AED', 'BTC', 'ETH'];
+
+    let pricesHtml = '<p>Current Prices</p> <ul>';
+
+      currencies.forEach(currency => {
+        if (rates[currency]) {
+            pricesHtml += `<li>${currency}: ${rates[currency]}</li>`;
+        } else {
+            pricesHtml += `<li>${currency}: N/A</li>`;
+        }
+      });
+
+        pricesHtml += '</ul>';
+    usdt.innerHTML = pricesHtml;
+}
+
+
+
+const displayUpdateTime = (date) => {
+    const updatetime = document.getElementById('updatetime');
+    updatetime.innerText = date;
+}
+
+
 
 
