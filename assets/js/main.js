@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
   "use strict";
 
@@ -82,10 +81,40 @@ $(document).ready(function() {
     $(document).on('scroll', toggleBacktotop);
   }
 
-  // Mobile nav toggle
-  $('.mobile-nav-toggle').on('click', function() {
+  /**
+   * Mobile nav toggle
+   */
+  $('.mobile-nav-toggle').on('click', function(e) {
+    e.preventDefault();
     $('body').toggleClass('mobile-nav-active');
-    $(this).toggleClass('bi-list bi-x');
+    var icon = $(this).find('i');
+    icon.toggleClass('bi-list bi-x');
+    
+    if ($('body').hasClass('mobile-nav-active')) {
+      $('#header').css('left', '0');
+    } else {
+      $('#header').css('left', '-300px');
+    }
+  });
+
+  // Close mobile nav when clicking outside
+  $(document).on('click', function(e) {
+    if (!$(e.target).closest('.mobile-nav-toggle').length && 
+        !$(e.target).closest('#navbar').length && 
+        $('body').hasClass('mobile-nav-active')) {
+      $('body').removeClass('mobile-nav-active');
+      $('.mobile-nav-toggle i').removeClass('bi-x').addClass('bi-list');
+      $('#header').css('left', '-300px');
+    }
+  });
+
+  // Close mobile nav when clicking on a nav link
+  $('.nav-link').on('click', function() {
+    if ($('body').hasClass('mobile-nav-active')) {
+      $('body').removeClass('mobile-nav-active');
+      $('.mobile-nav-toggle i').removeClass('bi-x').addClass('bi-list');
+      $('#header').css('left', '-300px');
+    }
   });
 
   // Scroll with offset on links with class name .scrollto
