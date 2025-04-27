@@ -18,6 +18,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@700&display=swap" rel="stylesheet">
 
+  <!-- Devicon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -28,7 +31,6 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
 
 </head>
 
@@ -183,41 +185,6 @@
       </div>
     </section><!-- End About Section -->
 
-    <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills section-bg">
-      <div class="container" data-aos="fade-up">
-  
-          <div class="section-title">
-              <h2>Skills</h2>
-              <p>My skills include the following:</p>
-          </div>
-  
-          <div class="row skills-content">
-              <div class="col-lg-6">
-                  <div class="section-title text-center mt-3">
-                      <h2>Frontend</h2>
-                  </div>
-                  <div id="frontend-skills"></div>
-              </div>
-  
-              <div class="col-lg-6">
-                  <div class="section-title text-center mt-3">
-                      <h2>Backend</h2>
-                  </div>
-                  <div id="backend-skills"></div>
-              </div>
-  
-              <div class="col-lg-8 m-auto">
-                  <div class="section-title text-center mt-3">
-                      <h2>Others</h2>
-                  </div>
-                  <div id="other-skills"></div>
-              </div>
-          </div>
-      </div>
-  </section>
-    <!-- End Skills Section -->
-
     <!-- ======= Resume Section ======= -->
     <section id="resume" class="resume">
       <div class="container" data-aos="fade-up">
@@ -234,8 +201,14 @@
             <h3 class="resume-title">Education</h3>
 
             <div class="resume-item">
-              <h4>High Vocational Certificate Digital Business Technology (Studying).</h4>
-              <h5>2023 - Present</h5>
+              <h4>Bachelor's Degree (Digital Business)</h4>
+              <h5>Currently Studying</h5>
+              <p><em>Siam Technological College (Siamtech)</em></p>
+            </div>
+
+            <div class="resume-item">
+              <h4>High Vocational Certificate (Digital Business Technology)</h4>
+              <h5>2023 - 2025</h5>
               <p><em>The Pattaya Redemptorist Technological College for People with Disabilities</em></p>
               <p>
 
@@ -243,7 +216,7 @@
             </div>
 
             <div class="resume-item">
-              <h4>Vocational Certificate information technology.</h4>
+              <h4>Vocational Certificate (Information Technology)</h4>
               <h5>2020 - 2022</h5>
               <p><em>The Pattaya Redemptorist Technological College for People with Disabilities</em></p>
               <p>
@@ -261,6 +234,14 @@
           </div>
           <div class="col-lg-6">
             <h3 class="resume-title">WORK EXPERIENCE</h3>
+            <div class="resume-item">
+              <h4>NATIONAL CYBER SECURITY AGENCY (NCSA)</h4>
+              <h5>Intern (November 2024 – February 2025)</h5>
+              <p><em>Bangkok, Thailand</em></p>
+              <ul>
+                <li>Developer of a cyber threat intelligence tracking system using artificial intelligence (AI) models and natural language processing (NLP) to support cyber intelligence operations.</li>
+              </ul>
+            </div>
             <div class="resume-item">
               <h4>Freelancer</h4>
               <h5>2023 - Present</h5>
@@ -282,6 +263,24 @@
 
       </div>
     </section><!-- End Resume Section -->
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills section-bg">
+      <div class="container" data-aos="fade-up">
+  
+          <div class="section-title">
+              <h2>Skills</h2>
+              <p>My skills include the following:</p>
+          </div>
+  
+          <div class="row skills-content">
+              <div id="skills-container">
+                  <!-- Skills will be loaded here by JavaScript -->
+              </div>
+          </div>
+      </div>
+    </section>
+    <!-- End Skills Section -->
 
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio section-bg">
@@ -658,6 +657,33 @@
             </div>
           </div>
 
+          <div class="col-lg-4 col-md-6 portfolio-item filter-certificate">
+            <div class="portfolio-wrap rounded-3">
+              <img src="assets/img/portfolio/c9.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Thailand Cyber Top Talent 2024</h4>
+                <p></p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/c9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                    title="Thailand Cyber Top Talent 2024"><i class="fa fa-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-certificate">
+            <div class="portfolio-wrap rounded-3">
+              <img src="assets/img/portfolio/c10.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>ผ่านการฝึกงานกับทางสำนักงานคณะกรรมการการรักษาความมั่นคงปลอดภัย (สกมช)</h4>
+                <p></p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/c10.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                    title="ผ่านการฝึกงานกับทางสำนักงานคณะกรรมการการรักษาความมั่นคงปลอดภัย (สกมช)"><i class="fa fa-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
 
         </div>
 
@@ -783,7 +809,7 @@
               <div class="email">
                 <i class="fas fa-envelope fa-beat"></i>
                 <h4>Email:</h4>
-                <p>piya.mianglae@gmail.com</p>
+                <p>piyamianglae.b@gmail.com</p>
               </div>
 
               <div class="phone">
@@ -876,6 +902,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/skills.js"></script>
 
 </body>
 

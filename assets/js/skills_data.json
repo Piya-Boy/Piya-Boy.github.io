@@ -1,0 +1,144 @@
+{
+    "frontend": [
+        {
+            "name": "HTML",
+            "icon": "devicon-html5-plain colored"
+        },
+        {
+            "name": "CSS",
+            "icon": "devicon-css3-plain colored"
+        },
+        {
+            "name": "SCSS",
+            "icon": "devicon-sass-original colored"
+        },
+        {
+            "name": "JavaScript",
+            "icon": "devicon-javascript-plain colored"
+        },
+        {
+            "name": "TypeScript",
+            "icon": "devicon-typescript-plain colored"
+        },
+        {
+            "name": "Bootstrap",
+            "icon": "devicon-bootstrap-plain colored"
+        },
+        {
+            "name": "Flutter",
+            "icon": "devicon-flutter-plain colored"
+        },
+        {
+            "name": "Tailwind",
+            "icon": "devicon-tailwindcss-plain colored"
+        },
+        {
+            "name": "ReactJs",
+            "icon": "devicon-react-original colored"
+        },
+        {
+            "name": "ViteJs",
+            "icon": "img"
+        },
+        {
+            "name": "VueJs",
+            "icon": "devicon-vuejs-plain colored"
+        },
+        {
+            "name": "NextJs",
+            "icon": "devicon-nextjs-plain colored"
+        },
+        {
+            "name": "jQuery",
+            "icon": "devicon-jquery-plain colored"
+        }
+    ],
+    "backend": [
+        {
+            "name": "PHP",
+            "icon": "devicon-php-plain colored"
+        },
+        {
+            "name": "Python",
+            "icon": "img"
+        },
+        {
+            "name": "C",
+            "icon": "devicon-c-plain colored"
+        },
+        {
+            "name": "MySQL",
+            "icon": "devicon-mysql-plain colored"
+        },
+        {
+            "name": "MongoDB",
+            "icon": "devicon-mongodb-plain colored"
+        },
+        {
+            "name": "NodeJS",
+            "icon": "devicon-nodejs-plain-wordmark colored"
+        },
+        {
+            "name": "VBA",
+            "icon": "img"
+        },
+        {
+            "name": "Dart",
+            "icon": "devicon-dart-plain colored"
+        },
+        {
+            "name": "CodeIgniter",
+            "icon": "devicon-codeigniter-plain colored"
+        },
+        {
+            "name": "Prisma",
+            "icon": "devicon-prisma-original"
+        },
+        {
+            "name": "PostgreSQL",
+            "icon": "devicon-postgresql-plain colored"
+        },
+        {
+            "name": "Supabase",
+            "icon": "devicon-supabase-plain colored"
+        }
+    ],
+    "others": [
+        {
+            "name": "GIT",
+            "icon": "devicon-git-plain colored"
+        },
+        {
+            "name": "GITHUB",
+            "icon": "devicon-github-original"
+        },
+        {
+            "name": "Microsoft Office",
+            "icon": "img"
+        },
+        {
+            "name": "Postman",
+            "icon": "devicon-postman-plain colored"
+        },
+        {
+            "name": "Power Automate",
+            "icon": "img"
+        },
+        {
+            "name": "Power BI",
+            "icon": "img"
+        },
+        {
+            "name": "Cyber Security",
+            "icon": "fas fa-shield-alt"
+        },
+        {
+            "name": "Photoshop",
+            "icon": "img"
+        },
+        {
+            "name": "Figma",
+            "icon": "img"
+        }
+    ]
+} 
