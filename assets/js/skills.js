@@ -2,7 +2,7 @@ async function loadSkills() {
     try {
         const response = await fetch('assets/js/skills_data.json');
         const data = await response.json();
-        
+        // console.log(data);
         const initialItems = 12; // แสดง 12 สกิลตอนแรก
         const itemsPerPage = 6; // เพิ่มทีละ 6 สกิลเมื่อกด Show More
         let visibleItems = {

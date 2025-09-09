@@ -1,42 +1,7 @@
 $(document).ready(function() {
   "use strict";
 
-  // Fetch skills data and populate the skill bars
-  $.getJSON('skills_data.json', function(data) {
-    const frontendContainer = $('#frontend-skills');
-    const backendContainer = $('#backend-skills');
-    const othersContainer = $('#other-skills');
-
-    $.each(data.skills.frontend, function(index, skill) {
-      frontendContainer.append(`
-        <div class="progress">
-          <span class="skill">${skill.name} <i class="val">${skill.value}%</i></span>
-          <div class="progress-bar-wrap">
-            <div class="progress-bar" role="progressbar" aria-valuenow="${skill.value}" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div>`);
-    });
-
-    $.each(data.skills.backend, function(index, skill) {
-      backendContainer.append(`
-        <div class="progress">
-          <span class="skill">${skill.name} <i class="val">${skill.value}%</i></span>
-          <div class="progress-bar-wrap">
-            <div class="progress-bar" role="progressbar" aria-valuenow="${skill.value}" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div>`);
-    });
-
-    $.each(data.skills.others, function(index, skill) {
-      othersContainer.append(`
-        <div class="progress">
-          <span class="skill">${skill.name} <i class="val">${skill.value}%</i></span>
-          <div class="progress-bar-wrap">
-            <div class="progress-bar" role="progressbar" aria-valuenow="${skill.value}" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div>`);
-    });
-  });
+  // Skills are now handled by skills.js
 
   // Age
   const birthdayYear = 2000;
@@ -267,4 +232,5 @@ $(document).ready(function() {
 
   // Initiate Pure Counter 
   new PureCounter();
+
 });

@@ -25,7 +25,7 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/Fontawesome/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
@@ -59,28 +59,106 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center">
-    <div class="container" data-aos="zoom-in" data-aos-delay="100">
-      <div class="d-flex">
-        <p>
-        <h1>I'm <strong class="typeds text-muted" data-typed-items="Piya Miang-Lae"></strong></h1>
-        </p>
+  <section id="hero" class="hero-section">
+    <div class="hero-background">
+      <div class="hero-particles"></div>
+      <div class="hero-gradient"></div>
+    </div>
+    
+    <div class="container">
+      <div class="row align-items-center min-vh-100">
+        <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+          <div class="hero-content">
+            <div class="hero-greeting">
+              <span class="greeting-text">Hello, I'm</span>
+            </div>
+            
+            <h1 class="hero-title">
+              <span class="name-highlight">Piya Miang-Lae</span>
+            </h1>
+            
+            <div class="hero-subtitle">
+              <span class="typed-text">I'm a </span>
+              <span class="typed" data-typed-items="Full Stack Developer, Cybersecurity, Mobile Developer, Database Specialist"></span>
+            </div>
+            
+            <p class="hero-description">
+              Passionate about creating innovative solutions and securing digital environments. 
+              With expertise in full-stack development and cybersecurity, I bring ideas to life 
+              while ensuring they're protected and scalable.
+            </p>
+            
+            <div class="hero-buttons">
+              <a href="#portfolio" class="btn btn-primary hero-btn">
+                <i class="fas fa-rocket"></i>
+                <span>View My Work</span>
+              </a>
+              <a href="#contact" class="btn btn-outline-primary hero-btn">
+                <i class="fas fa-envelope"></i>
+                <span>Get In Touch</span>
+              </a>
+            </div>
+            
+            <div class="hero-cta-section">
+              <div class="cta-content">
+                <h3>Ready to work together?</h3>
+                <p>Let's create something amazing and secure</p>
+                <div class="cta-buttons">
+                  <a href="#contact" class="cta-btn primary">
+                    <i class="fas fa-paper-plane"></i>
+                    <span>Start Project</span>
+                  </a>
+                  <a href="Piya Miang-Lae Resume.pdf" class="cta-btn secondary" download>
+                    <i class="fas fa-download"></i>
+                    <span>Download CV</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+          <div class="hero-image-container">
+            <div class="hero-image-wrapper">
+              <img src="assets/img/profile-img.jpg" alt="Piya Miang-Lae" class="hero-image">
+              <div class="hero-image-overlay">
+                <div class="floating-elements">
+                  <div class="floating-icon icon-1">
+                    <i class="fas fa-code"></i>
+                  </div>
+                  <div class="floating-icon icon-2">
+                    <i class="fas fa-shield-alt"></i>
+                  </div>
+                  <div class="floating-icon icon-3">
+                    <i class="fas fa-mobile-alt"></i>
+                  </div>
+                  <div class="floating-icon icon-4">
+                    <i class="fas fa-database"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <p>I'm <span class="typed" data-typed-items="Developer, Freelancer, Full Stack Developer, Backend Developer"></span></p>
-      <div class="social-links">
-        <a href="https://www.facebook.com/piya.boyman" target="_blank" class="facebook"><i
-            class="fa-brands fa-facebook fa-beat"></i></a>
-        <a href="https://www.instagram.com/mr_piya_miang_lae/" target="_blank" class="instagram"><i
-            class="fa-brands fa-instagram fa-beat"></i></a>
-        <a href="https://github.com/Piya-Boy/Piya-Boy" target="_blank" class="github"><i
-            class="fa-brands fa-github fa-beat"></i></a>
-        <a href="https://www.linkedin.com/in/piya-miang-lae-6167392a5/" target="_blank" class="linkedin"><i class="fa-brands fa-linkedin fa-beat"></i></a>
+      
+      <div class="hero-social" data-aos="fade-up" data-aos-delay="300">
+        <div class="social-links">
+          <a href="https://www.facebook.com/piya.boyman" target="_blank" class="social-link facebook">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/mr_piya_miang_lae/" target="_blank" class="social-link instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://github.com/Piya-Boy/Piya-Boy" target="_blank" class="social-link github">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/piya-miang-lae-6167392a5/" target="_blank" class="social-link linkedin">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </div>
       </div>
-
-      <a href="Piya Miang-Lae Resume.pdf" class="btn btn-outline-primary mt-3" download>
-        <i class="fa-solid fa-download fa-beat"></i>
-        Download Resume
-      </a>
     </div>
   </section><!-- End Hero -->
 
@@ -91,91 +169,136 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>About</h2>
-          <p>Hi, Mr.Piya Miang-Lae! I'm a full-stack web developer with specialized skills in both back-end and
- front-end development. My expertise lies in backend technologies such as CodeIgniter, PHP, and MySQL. On the
-  front-end, I am proficient in JavaScript, jQuery, CSS/SCSS, as well as Bootstrap and Tailwind for creating
- dynamic and engaging user interfaces.</p>
+          <h2>About Me</h2>
+          <p>Passionate Full Stack Developer & Cybersecurity Expert</p>
         </div>
- 
-        <div class="row">
-          <div class="col-lg-4">
-            <img src="assets/img/profile-img.jpg" class="img-fluid rounded-circle" alt="">
-          </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content">
-            <h3>Full Stack Developer &amp; Web Developer.</h3>
-            <p class="fst-italic">
-              I'm a full-stack web developer with specialized skills in both back-end and front-end development.
-            </p>
-            <div class="row">
-              <div class="card bg-dark rounded-3">
-                <div class="card-header py-2">
-                  <a class="dot" href="#"></a>
-                  <a class="dot" href="#"></a>
-                  <a class="dot" href="#"></a>
+
+        <div class="row align-items-center">
+          <!-- Profile Image Section -->
+          <div class="col-lg-4" data-aos="fade-right" data-aos-delay="100">
+            <div class="profile-container">
+              <div class="profile-image-wrapper">
+                <img src="assets/img/profile-img.jpg" class="profile-image" alt="Piya Miang-Lae">
+                <div class="profile-overlay">
+                  <div class="profile-badge">
+                    <i class="fas fa-code"></i>
+                    <span>Developer</span>
+                  </div>
                 </div>
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <div class="cli-control ">
-                        <span class="text-left d-flex align-items-center">$:\Piya-Boy.github.io> <p
-                            class="text-warning ms-2">About Me</p></span>
-                      </div>
-                      <ul class="mt-3">
-                        <li><i class="bi bi-chevron-right fa-beat"></i> <strong>Birthday:</strong>
-                          <span>23 October
-                            2000</span>
-                        </li>
-                        <li><i class="bi bi-chevron-right fa-beat"></i> <strong>GitHub:</strong>
-                          <span>https://github.com/Piya-Boy/Piya-Boy</span>
-                        </li>
-                        <li><i class="bi bi-chevron-right fa-beat"></i> <strong>Phone:</strong>
-                          <span>+66 97 959 8177</span>
-                        </li>
-                        <li><i class="bi bi-chevron-right fa-beat"></i> <strong>City:</strong>
-                          <span>Chiang Rai,
-                            Thailand.</span>
-                        </li>
-                      </ul>
+              </div>
+              <div class="profile-badges">
+                <div class="badge-item" data-aos="zoom-in" data-aos-delay="200">
+                  <div class="badge-icon">
+                    <i class="fas fa-shield-alt"></i>
+                  </div>
+                  <span class="badge-text">Cybersecurity</span>
+                </div>
+                
+                <div class="badge-item" data-aos="zoom-in" data-aos-delay="300">
+                  <div class="badge-icon">
+                    <i class="fas fa-code"></i>
+                  </div>
+                  <span class="badge-text">Full Stack</span>
+                </div>
+                
+                <div class="badge-item" data-aos="zoom-in" data-aos-delay="400">
+                  <div class="badge-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                  </div>
+                  <span class="badge-text">Mobile Dev</span>
+                </div>
+                
+                <div class="badge-item" data-aos="zoom-in" data-aos-delay="500">
+                  <div class="badge-icon">
+                    <i class="fas fa-database"></i>
+                  </div>
+                  <span class="badge-text">Database</span>
+                </div>
+              </div>
+            </div>
+          </div>
 
-                      <div class="cli-control mt-3">
-                        <span class="text-left d-flex align-items-center">$:\Piya-Boy.github.io> </span>
-                      </div>
+          <!-- Content Section -->
+          <div class="col-lg-8" data-aos="fade-left" data-aos-delay="200">
+            <div class="about-content">
+              <div class="intro-section">
+                <h3 class="intro-title">
+                  <span class="highlight">Full Stack Developer</span> & 
+                  <span class="highlight">Cybersecurity Consultant</span>
+                </h3>
+                <p class="intro-description">
+                  Hi! I'm <strong>Piya Miang-Lae</strong>, a passionate full-stack developer with specialized expertise in both backend and frontend development. I'm currently working as a Cybersecurity Consultant and a Programmer, bringing innovative solutions to various projects and helping organizations strengthen their digital security.
+                </p>
+              </div>
 
+              <!-- Skills Preview -->
+              <div class="skills-preview">
+                <h4>Core Expertise</h4>
+                <div class="skill-tags">
+                  <span class="skill-tag backend">PHP & CodeIgniter</span>
+                  <span class="skill-tag frontend">JavaScript & React</span>
+                  <span class="skill-tag fullstack">Next.js & Tailwind</span>
+                  <span class="skill-tag database">MySQL & MongoDB</span>
+                  <span class="skill-tag security">Cybersecurity</span>
+                  <span class="skill-tag mobile">Flutter & Dart</span>
+                  <span class="skill-tag frontend">Node.js & Express</span>
+
+                </div>
+              </div>
+
+              <!-- Personal Info Cards -->
+              <div class="info-cards">
+                <div class="row">
+                  <div class="col-md-6 mb-2">
+                    <div class="info-card" data-aos="zoom-in" data-aos-delay="300">
+                      <div class="info-icon">
+                        <i class="fas fa-user"></i>
+                      </div>
+                      <div class="info-content">
+                        <h5>Personal Info</h5>
+                        <ul>
+                          <li><i class="fas fa-birthday-cake"></i> <strong>Age:</strong> <span id="age"></span> years old</li>
+                          <li><i class="fas fa-calendar"></i> <strong>Birthday:</strong> 23 October 2000</li>
+                          <li><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Chiang Rai, Thailand</li>
+                          <li><i class="fas fa-wheelchair"></i> <strong>Note:</strong> Movement disabilities</li>
+                        </ul>
+                      </div>
                     </div>
-
-                    <div class="col-lg-6">
-                      <div class="cli-control">
-                        <span class="text-left d-flex align-items-center">$:\Piya-Boy.github.io> <p
-                            class="text-warning ms-2">About Me</p></span>
+                  </div>
+                  
+                  <div class="col-md-6 mb-2">
+                    <div class="info-card" data-aos="zoom-in" data-aos-delay="400">
+                      <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
                       </div>
-
-                      <ul class="mt-3">
-                        <li><i class="bi bi-chevron-right fa-beat"></i> <strong>Age:</strong>
-                          <span id="age"></span>
-                        </li>
-                        <li><i class="bi bi-chevron-right"></i> <strong>Disability:</strong>
-                          <span>Movement
-                            disabilities.</span>
-                        </li>
-                        <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong>
-                          <span>piyamianglae.b@gmail.com</span>
-                        </li>
-                        <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong>
-                          <span>Available</span>
-                        </li>
-                      </ul>
-
-                      <div class="cli-control mt-3">
-                        <span class="text-left d-flex align-items-center">$:\Piya-Boy.github.io> </span>
+                      <div class="info-content">
+                        <h5>Contact Info</h5>
+                        <ul>
+                          <li><i class="fas fa-phone"></i> <strong>Phone:</strong> +66 97 959 8177</li>
+                          <li><i class="fas fa-envelope"></i> <strong>Email:</strong> piyamianglae.b@gmail.com</li>
+                          <li><i class="fab fa-github"></i> <strong>GitHub:</strong> Piya-Boy</li>
+                          <li><i class="fas fa-briefcase"></i> <strong>Freelance:</strong> Available</li>
+                        </ul>
                       </div>
-
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
 
+              <!-- Call to Action -->
+              <div class="cta-section" data-aos="fade-up" data-aos-delay="500">
+                <div class="cta-buttons">
+                  <a href="#contact" class="btn btn-primary cta-btn">
+                    <i class="fas fa-paper-plane"></i>
+                    Get In Touch
+                  </a>
+                  <a href="Piya Miang-Lae Resume.pdf" class="btn btn-outline-primary cta-btn" download>
+                    <i class="fas fa-download"></i>
+                    Download Resume
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -194,66 +317,199 @@
         </div>
 
         <div class="row">
+          <!-- Education Column -->
           <div class="col-lg-6">
-            <h3 class="resume-title">Education</h3>
+            <div class="timeline-section">
+              <div class="section-header education-header" data-aos="fade-up">
+                <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                <div class="header-line"></div>
+              </div>
+              
+              <div class="timeline-container education-timeline">
+                <!-- Timeline Item 1 - Current Education -->
+                <div class="timeline-item education" data-aos="fade-up" data-aos-delay="100">
+                  <div class="timeline-marker education-marker">
+                    <i class="fas fa-graduation-cap"></i>
+                  </div>
+                  <div class="timeline-content">
+                    <div class="timeline-header">
+                      <h4>Bachelor's Degree (Digital Business)</h4>
+                      <span class="timeline-date">Currently Studying</span>
+                    </div>
+                    <h5>Undergraduate Program</h5>
+                    <p class="timeline-location"><i class="fas fa-university"></i> Siam Technological College (Siamtech)</p>
+                    <ul>
+                      <li>Focusing on digital business strategies and technologies</li>
+                      <li>Learning modern business practices and digital transformation</li>
+                    </ul>
+                  </div>
+                </div>
 
-            <div class="resume-item">
-              <h4>Bachelor's Degree (Digital Business)</h4>
-              <h5>Currently Studying</h5>
-              <p><em>Siam Technological College (Siamtech)</em></p>
-            </div>
+                <!-- Timeline Item 2 - High Vocational -->
+                <div class="timeline-item education" data-aos="fade-up" data-aos-delay="200">
+                  <div class="timeline-marker education-marker">
+                    <i class="fas fa-certificate"></i>
+                  </div>
+                  <div class="timeline-content">
+                    <div class="timeline-header">
+                      <h4>High Vocational Certificate (Digital Business Technology)</h4>
+                      <span class="timeline-date">2023 - 2025</span>
+                    </div>
+                    <h5>Advanced Diploma</h5>
+                    <p class="timeline-location"><i class="fas fa-university"></i> The Pattaya Redemptorist Technological College for People with Disabilities</p>
+                    <ul>
+                      <li>Specialized in digital business technology</li>
+                      <li>Advanced programming and system development</li>
+                    </ul>
+                  </div>
+                </div>
 
-            <div class="resume-item">
-              <h4>High Vocational Certificate (Digital Business Technology)</h4>
-              <h5>2023 - 2025</h5>
-              <p><em>The Pattaya Redemptorist Technological College for People with Disabilities</em></p>
-              <p>
+                <!-- Timeline Item 3 - Vocational -->
+                <div class="timeline-item education" data-aos="fade-up" data-aos-delay="300">
+                  <div class="timeline-marker education-marker">
+                    <i class="fas fa-certificate"></i>
+                  </div>
+                  <div class="timeline-content">
+                    <div class="timeline-header">
+                      <h4>Vocational Certificate (Information Technology)</h4>
+                      <span class="timeline-date">2020 - 2022</span>
+                    </div>
+                    <h5>Diploma Program</h5>
+                    <p class="timeline-location"><i class="fas fa-university"></i> The Pattaya Redemptorist Technological College for People with Disabilities</p>
+                    <ul>
+                      <li>Foundation in information technology</li>
+                      <li>Programming fundamentals and system analysis</li>
+                    </ul>
+                  </div>
+                </div>
 
-              </p>
-            </div>
-
-            <div class="resume-item">
-              <h4>Vocational Certificate (Information Technology)</h4>
-              <h5>2020 - 2022</h5>
-              <p><em>The Pattaya Redemptorist Technological College for People with Disabilities</em></p>
-              <p>
-
-              </p>
-            </div>
-            <div class="resume-item">
-              <h4>Elementary school.</h4>
-              <h5>2002 - 2018</h5>
-              <p><em>Home Of Charity</em></p>
-              <p>
-
-              </p>
+                <!-- Timeline Item 4 - Elementary -->
+                <div class="timeline-item education" data-aos="fade-up" data-aos-delay="400">
+                  <div class="timeline-marker education-marker">
+                    <i class="fas fa-school"></i>
+                  </div>
+                  <div class="timeline-content">
+                    <div class="timeline-header">
+                      <h4>Elementary School</h4>
+                      <span class="timeline-date">2002 - 2018</span>
+                    </div>
+                    <h5>Basic Education</h5>
+                    <p class="timeline-location"><i class="fas fa-university"></i> Home Of Charity</p>
+                    <ul>
+                      <li>Completed primary and secondary education</li>
+                      <li>Foundation for further academic pursuits</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+
+          <!-- Work Experience Column -->
           <div class="col-lg-6">
-            <h3 class="resume-title">WORK EXPERIENCE</h3>
-            <div class="resume-item">
-              <h4>NATIONAL CYBER SECURITY AGENCY (NCSA)</h4>
-              <h5>Intern (November 2024 – February 2025)</h5>
-              <p><em>Bangkok, Thailand</em></p>
-              <ul>
-                <li>Developer of a cyber threat intelligence tracking system using artificial intelligence (AI) models and natural language processing (NLP) to support cyber intelligence operations.</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>Freelancer</h4>
-              <h5>2023 - Present</h5>
-              <p><em>Pattaya </em></p>
-              <ul>
-                <li>A Full Stack Developer.</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>TSS Social Enterprise Company (Internship).</h4>
-              <h5>2021 - 2022</h5>
-              <p><em>Pattaya </em></p>
-              <ul>
-                <li>development of the Thai postal system.</li>
-              </ul>
+            <div class="timeline-section">
+              <div class="section-header work-header" data-aos="fade-up" data-aos-delay="500">
+                <h3><i class="fas fa-briefcase"></i> Work Experience</h3>
+                <div class="header-line"></div>
+              </div>
+              
+              <div class="timeline-container work-timeline">
+                <!-- Timeline Item 1 - Current Work - SOSECURE -->
+                <div class="timeline-item work" data-aos="fade-up" data-aos-delay="600">
+                  <div class="timeline-marker work-marker">
+                    <i class="fas fa-shield-alt"></i>
+                  </div>
+                  <div class="timeline-content">
+                    <div class="timeline-header">
+                      <h4>SOSECURE Co.Ltd</h4>
+                      <span class="timeline-date">2025 - Present</span>
+                    </div>
+                    <h5>Cybersecurity Consultant</h5>
+                    <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> Bangkok, Thailand</p>
+                    <ul>
+                      <li>Providing cybersecurity consulting services to clients</li>
+                      <li>Assessing and improving security infrastructure</li>
+                      <li>Developing security policies and procedures</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Timeline Item 2 - E-HONGMODDAENG -->
+                <div class="timeline-item work" data-aos="fade-up" data-aos-delay="700">
+                  <div class="timeline-marker work-marker">
+                    <i class="fas fa-motorcycle"></i>
+                  </div>
+                  <div class="timeline-content">
+                    <div class="timeline-header">
+                      <h4>E-HONGMODDAENG MOTORBIKE COMPANY LIMITED</h4>
+                      <span class="timeline-date">2025 - Present</span>
+                    </div>
+                    <h5>Programmer</h5>
+                    <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> Maha Sarakham, Thailand</p>
+                    <ul>
+                      <li>Developing software solutions for motorbike business operations</li>
+                      <li>Maintaining and updating existing systems</li>
+                      <li>Collaborating with team to deliver quality software products</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Timeline Item 3 - NCSA Internship -->
+                <div class="timeline-item work" data-aos="fade-up" data-aos-delay="800">
+                  <div class="timeline-marker work-marker">
+                    <i class="fas fa-shield-alt"></i>
+                  </div>
+                  <div class="timeline-content">
+                    <div class="timeline-header">
+                      <h4>NATIONAL CYBER SECURITY AGENCY (NCSA)</h4>
+                      <span class="timeline-date">Nov 2024 - Feb 2025</span>
+                    </div>
+                    <h5>Intern</h5>
+                    <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> Bangkok, Thailand</p>
+                    <ul>
+                      <li>Developer of a cyber threat intelligence tracking system using artificial intelligence (AI) models and natural language processing (NLP) to support cyber intelligence operations.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Timeline Item 4 - Freelancer -->
+                <div class="timeline-item work" data-aos="fade-up" data-aos-delay="900">
+                  <div class="timeline-marker work-marker">
+                    <i class="fas fa-laptop-code"></i>
+                  </div>
+                  <div class="timeline-content">
+                    <div class="timeline-header">
+                      <h4>Freelancer</h4>
+                      <span class="timeline-date">2023 - 2025</span>
+                    </div>
+                    <h5>Full Stack Developer</h5>
+                    <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> Pattaya</p>
+                    <ul>
+                      <li>Developing web applications using modern technologies</li>
+                      <li>Working with clients to deliver custom solutions</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Timeline Item 5 - TSS Internship -->
+                <div class="timeline-item work" data-aos="fade-up" data-aos-delay="1000">
+                  <div class="timeline-marker work-marker">
+                    <i class="fas fa-building"></i>
+                  </div>
+                  <div class="timeline-content">
+                    <div class="timeline-header">
+                      <h4>TSS Social Enterprise Company</h4>
+                      <span class="timeline-date">2021 - 2022</span>
+                    </div>
+                    <h5>Internship</h5>
+                    <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> Pattaya</p>
+                    <ul>
+                      <li>Development of the Thai postal system</li>
+                      <li>Gained experience in enterprise software development</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -692,63 +948,181 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Contact</h2>
+          <h2>Get In Touch</h2>
+          <p>Let's work together to bring your ideas to life</p>
         </div>
 
-        <div class="row mt-1">
-
+        <div class="row">
+          <!-- Contact Info Cards -->
           <div class="col-lg-4">
-            <div class="info">
-              <div class="address">
-                <i class="fas fa-map-marker-alt fa-beat"></i>
-                <h4>Location:</h4>
-                <p>280/7 Sridonmul, Chiang Saen District, Chiang Rai Province, Thailand.</p>
+            <div class="contact-info">
+              <div class="contact-card" data-aos="fade-right" data-aos-delay="100">
+                <div class="contact-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contact-details">
+                  <h4>Location</h4>
+                  <p>280/7 Sridonmul, Chiang Saen District<br>Chiang Rai Province, Thailand</p>
+                </div>
               </div>
 
-              <div class="email">
-                <i class="fas fa-envelope fa-beat"></i>
-                <h4>Email:</h4>
-                <p>piyamianglae.b@gmail.com</p>
+              <div class="contact-card" data-aos="fade-right" data-aos-delay="200">
+                <div class="contact-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-details">
+                  <h4>Email</h4>
+                  <p><a href="mailto:piyamianglae.b@gmail.com">piyamianglae.b@gmail.com</a></p>
+                </div>
               </div>
 
-              <div class="phone">
-                <i class="fas fa-phone fa-beat"></i>
-                <h4>Call:</h4>
-                <p>+66 97 959 8177.</p>
+              <div class="contact-card" data-aos="fade-right" data-aos-delay="300">
+                <div class="contact-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div class="contact-details">
+                  <h4>Phone</h4>
+                  <p><a href="tel:+66979598177">+66 97 959 8177</a></p>
+                </div>
               </div>
 
+              <!-- Social Media Links -->
+              <div class="social-contact" data-aos="fade-right" data-aos-delay="400">
+                <div class="social-header">
+                  <div class="social-icon">
+                    <i class="fas fa-network-wired"></i>
+                  </div>
+                  <h4>Let's Connect</h4>
+                  <p>Follow me for updates and collaborations</p>
+                </div>
+                <div class="social-links-contact">
+                  <a href="https://www.facebook.com/piya.boyman" target="_blank" class="social-link facebook">
+                    <div class="social-icon-wrapper">
+                      <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <div class="social-info">
+                      <span class="social-name">Facebook</span>
+                      <span class="social-handle">piya.boyman</span>
+                    </div>
+                    <div class="social-arrow">
+                      <i class="fas fa-external-link-alt"></i>
+                    </div>
+                  </a>
+                  <a href="https://www.instagram.com/mr_piya_miang_lae/" target="_blank" class="social-link instagram">
+                    <div class="social-icon-wrapper">
+                      <i class="fab fa-instagram"></i>
+                    </div>
+                    <div class="social-info">
+                      <span class="social-name">Instagram</span>
+                      <span class="social-handle">mr_piya_miang_lae</span>
+                    </div>
+                    <div class="social-arrow">
+                      <i class="fas fa-external-link-alt"></i>
+                    </div>
+                  </a>
+                  <a href="https://github.com/Piya-Boy/Piya-Boy" target="_blank" class="social-link github">
+                    <div class="social-icon-wrapper">
+                      <i class="fab fa-github"></i>
+                    </div>
+                    <div class="social-info">
+                      <span class="social-name">GitHub</span>
+                      <span class="social-handle">Piya-Boy</span>
+                    </div>
+                    <div class="social-arrow">
+                      <i class="fas fa-external-link-alt"></i>
+                    </div>
+                  </a>
+                  <a href="https://www.linkedin.com/in/piya-miang-lae-6167392a5/" target="_blank" class="social-link linkedin">
+                    <div class="social-icon-wrapper">
+                      <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <div class="social-info">
+                      <span class="social-name">LinkedIn</span>
+                      <span class="social-handle">Piya Miang-Lae</span>
+                    </div>
+                    <div class="social-arrow">
+                      <i class="fas fa-external-link-alt"></i>
+                    </div>
+                  </a>
+                </div>
+              </div>
             </div>
-
           </div>
 
-          <div class="col-lg-8 mt-5 mt-lg-0">
+          <!-- Contact Form -->
+          <div class="col-lg-8">
+            <div class="contact-form-wrapper" data-aos="fade-left" data-aos-delay="200">
+              <div class="form-header">
+                <h3>Send Me a Message</h3>
+                <p>I'm always interested in new opportunities and exciting projects</p>
+              </div>
 
-            <form action="https://api.web3forms.com/submit" method="POST" role="form" class="php-email-form">
-              <input type="hidden" name="access_key" value="1c4c7783-5067-48a4-9234-a6b037e2a66c">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+              <form action="https://api.web3forms.com/submit" method="POST" role="form" class="contact-form">
+                <input type="hidden" name="access_key" value="1c4c7783-5067-48a4-9234-a6b037e2a66c">
+                
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="name">Full Name</label>
+                      <input type="text" name="name" class="form-control" id="name" placeholder="Enter your full name" required>
+                      <div class="form-icon">
+                        <i class="fas fa-user"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="email">Email Address</label>
+                      <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email" required>
+                      <div class="form-icon">
+                        <i class="fas fa-envelope"></i>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                </div>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-              </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
 
+                <div class="form-group">
+                  <label for="subject">Subject</label>
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="What's this about?" required>
+                  <div class="form-icon">
+                    <i class="fas fa-tag"></i>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea class="form-control" name="message" id="message" rows="6" placeholder="Tell me about your project or idea..." required></textarea>
+                  <div class="form-icon">
+                    <i class="fas fa-comment"></i>
+                  </div>
+                </div>
+
+                <div class="form-status">
+                  <div class="loading">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <span>Sending your message...</span>
+                  </div>
+                  <div class="error-message">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>Sorry, there was an error sending your message. Please try again.</span>
+                  </div>
+                  <div class="sent-message">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Thank you! Your message has been sent successfully.</span>
+                  </div>
+                </div>
+
+                <div class="form-submit">
+                  <button type="submit" class="submit-btn">
+                    <span class="btn-text">Send Message</span>
+                    <span class="btn-icon">
+                      <i class="fas fa-paper-plane"></i>
+                    </span>
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
-
         </div>
 
       </div>
@@ -784,11 +1158,13 @@
   </footer><!-- End Footer -->
 
   <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="fa-sharp fa-solid fa-chevron-up fa-beat"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+    <i class="fa-solid fa-chevron-up fa-beat"></i>
+  </a>
 
   <!-- Vendor JS Files -->
   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js" integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
