@@ -49,14 +49,13 @@ export default function Portfolio() {
           </div>
         </div>
 
-        <div className="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+        <div className="portfolio-container" data-aos="fade-up" data-aos-delay="200">
           {visibleItems.map((item, index) => (
-            <div className={`col-lg-4 col-md-6 portfolio-item filter-${item.category}`} key={`${item.img}-${index}`}>
-              <div className="portfolio-wrap rounded-3">
-                <img src={`/img/portfolio/${item.img}`} className="img-fluid" alt="" />
+            <div className={`portfolio-item filter-${item.category}`} key={`${item.img}-${index}`}>
+              <div className="portfolio-wrap">
+                <img src={`/img/portfolio/${item.img}`} className="img-fluid" alt="" loading="lazy" />
                 <div className="portfolio-info">
                   <h4>{item.title}</h4>
-                  <p></p>
                   <div className="portfolio-links">
                     <a
                       href={`/img/portfolio/${item.img}`}

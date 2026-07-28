@@ -15,13 +15,12 @@ export default function About() {
           <div className="col-lg-4" data-aos="fade-right" data-aos-delay="100">
             <div className="profile-container">
               <div className="profile-image-wrapper">
+                <span className="scan-corner corner-tl"></span>
+                <span className="scan-corner corner-tr"></span>
+                <span className="scan-corner corner-bl"></span>
+                <span className="scan-corner corner-br"></span>
                 <img src="/img/profile-img.jpg" className="profile-image" alt="Piya Miang-Lae" />
-                <div className="profile-overlay">
-                  <div className="profile-badge">
-                    <i className="fas fa-code"></i>
-                    <span>Developer</span>
-                  </div>
-                </div>
+                <div className="scan-tag mono">IMG_01.JPG</div>
               </div>
               <div className="profile-badges">
                 <div className="badge-item" data-aos="zoom-in" data-aos-delay="200">
@@ -60,7 +59,7 @@ export default function About() {
               <div className="intro-section">
                 <h3 className="intro-title">
                   <span className="highlight">Full Stack Developer</span> &
-                  <span className="highlight">Cybersecurity Consultant</span>
+                  <span className="highlight"> Cybersecurity Consultant</span>
                 </h3>
                 <p className="intro-description">
                   Hi! I'm <strong>Piya Miang-Lae</strong>, a passionate full-stack developer with specialized expertise in both backend and frontend development. I'm currently working as a Cybersecurity Consultant and a Programmer, bringing innovative solutions to various projects and helping organizations strengthen their digital security.
@@ -107,7 +106,7 @@ export default function About() {
                       <div className="info-content">
                         <h5>Contact Info</h5>
                         <ul>
-                          <li><i className="fas fa-phone"></i> <strong>Phone:</strong> +66 97 959 8177</li>
+                          <li><i className="fas fa-phone"></i> <strong>Phone:</strong> +66 63 171 3123</li>
                           <li><i className="fas fa-envelope"></i> <strong>Email:</strong> piyamianglae.b@gmail.com</li>
                           <li><i className="fab fa-github"></i> <strong>GitHub:</strong> Piya-Boy</li>
                           <li><i className="fas fa-briefcase"></i> <strong>Freelance:</strong> Available</li>

@@ -18,14 +18,28 @@ export default function Hero() {
 
   return (
     <section id="hero" className="hero-section">
-      <div className="hero-background">
-        <div className="hero-particles"></div>
-        <div className="hero-gradient"></div>
+      <div className="hero-image-backdrop" aria-hidden="true">
+        <img src="/img/profile-cutout.png" alt="" className="hero-image" />
+      </div>
+
+      <div className="hero-tags" aria-hidden="true">
+        <div className="hero-tag tag-1 mono">
+          <span className="hero-tag-dot"></span>
+          Full-Stack Dev
+        </div>
+        <div className="hero-tag tag-2 mono">
+          <span className="hero-tag-dot"></span>
+          Cybersecurity
+        </div>
+        <div className="hero-tag tag-3 mono">
+          <span className="hero-tag-dot"></span>
+          Mobile Dev
+        </div>
       </div>
 
       <div className="container">
-        <div className="row align-items-center min-vh-100">
-          <div className="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+        <div className="row hero-row">
+          <div className="col-lg-7" data-aos="fade-right" data-aos-delay="100">
             <div className="hero-content">
               <div className="hero-greeting">
                 <span className="greeting-text">Hello, I'm</span>
@@ -75,47 +89,42 @@ export default function Hero() {
               </div>
             </div>
           </div>
-
-          <div className="col-lg-6" data-aos="fade-left" data-aos-delay="200">
-            <div className="hero-image-container">
-              <div className="hero-image-wrapper">
-                <img src="/img/profile-img.jpg" alt="Piya Miang-Lae" className="hero-image" />
-                <div className="hero-image-overlay">
-                  <div className="floating-elements">
-                    <div className="floating-icon icon-1">
-                      <i className="fas fa-code"></i>
-                    </div>
-                    <div className="floating-icon icon-2">
-                      <i className="fas fa-shield-alt"></i>
-                    </div>
-                    <div className="floating-icon icon-3">
-                      <i className="fas fa-mobile-alt"></i>
-                    </div>
-                    <div className="floating-icon icon-4">
-                      <i className="fas fa-database"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
 
-        <div className="hero-social" data-aos="fade-up" data-aos-delay="300">
-          <div className="social-links">
-            <a href="https://www.facebook.com/piya.boyman" target="_blank" rel="noreferrer" className="social-link facebook">
-              <i className="fa-brands fa-facebook"></i>
-            </a>
-            <a href="https://www.instagram.com/mr_piya_miang_lae/" target="_blank" rel="noreferrer" className="social-link instagram">
-              <i className="fa-brands fa-instagram"></i>
-            </a>
-            <a href="https://github.com/Piya-Boy/Piya-Boy" target="_blank" rel="noreferrer" className="social-link github">
-              <i className="fa-brands fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/piya-miang-lae-6167392a5/" target="_blank" rel="noreferrer" className="social-link linkedin">
-              <i className="fa-brands fa-linkedin"></i>
-            </a>
+        <div className="hero-stats" data-aos="fade-up" data-aos-delay="300">
+          <div className="hero-stat">
+            <span className="hero-stat-value mono">34</span>
+            <span className="hero-stat-label mono">Skills indexed</span>
           </div>
+          <div className="hero-stat">
+            <span className="hero-stat-value mono">09</span>
+            <span className="hero-stat-label mono">Certificates</span>
+          </div>
+          <div className="hero-stat">
+            <span className="hero-stat-value mono">05+</span>
+            <span className="hero-stat-label mono">Years coding</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="hero-social" data-aos="fade-up" data-aos-delay="300">
+        <div className="social-links">
+          <a href="https://www.facebook.com/piya.boyman" target="_blank" rel="noreferrer" className="social-link facebook">
+            <i className="fa-brands fa-facebook"></i>
+            <span className="social-link-label mono">Facebook</span>
+          </a>
+          <a href="https://www.instagram.com/mr_piya_miang_lae/" target="_blank" rel="noreferrer" className="social-link instagram">
+            <i className="fa-brands fa-instagram"></i>
+            <span className="social-link-label mono">Instagram</span>
+          </a>
+          <a href="https://github.com/Piya-Boy/Piya-Boy" target="_blank" rel="noreferrer" className="social-link github">
+            <i className="fa-brands fa-github"></i>
+            <span className="social-link-label mono">GitHub</span>
+          </a>
+          <a href="https://www.linkedin.com/in/piya-miang-lae-6167392a5/" target="_blank" rel="noreferrer" className="social-link linkedin">
+            <i className="fa-brands fa-linkedin"></i>
+            <span className="social-link-label mono">LinkedIn</span>
+          </a>
         </div>
       </div>
     </section>

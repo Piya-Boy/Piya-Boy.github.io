@@ -2,8 +2,6 @@ import { useEffect, useMemo, useState } from 'react'
 import AOS from 'aos'
 import skillsData from '../../assets/data/skills_data.json'
 
-const INITIAL_ITEMS = 12
-const ITEMS_PER_PAGE = 6
 const FILTERS = ['all', 'frontend', 'backend', 'others']
 
 function iconMarkup(skill) {
@@ -11,16 +9,15 @@ function iconMarkup(skill) {
     const slug = skill.name.toLowerCase().replace(/\s+/g, '-')
     return <img src={`/img/icons/${slug}.png`} alt={skill.name} className="skill-icon" />
   }
-  return <i className={`${skill.icon} fa-2x mb-2`}></i>
+  return <i className={`${skill.icon} fa-2x`}></i>
 }
 
 export default function Skills() {
   const [filter, setFilter] = useState('all')
-  const [visibleCount, setVisibleCount] = useState(INITIAL_ITEMS)
 
   useEffect(() => {
     AOS.refresh()
-  }, [filter, visibleCount])
+  }, [filter])
 
   const allSkills = useMemo(
     () => [
@@ -31,13 +28,16 @@ export default function Skills() {
     [],
   )
 
+  const counts = useMemo(() => {
+    const c = { all: allSkills.length, frontend: 0, backend: 0, others: 0 }
+    allSkills.forEach((s) => { c[s.category] += 1 })
+    return c
+  }, [allSkills])
+
   const filteredSkills = filter === 'all' ? allSkills : allSkills.filter((s) => s.category === filter)
-  const visibleSkills = filteredSkills.slice(0, visibleCount)
-  const hasMore = filteredSkills.length > visibleCount
 
   const handleFilterClick = (value) => {
     setFilter(value)
-    setVisibleCount(INITIAL_ITEMS)
   }
 
   return (
@@ -48,45 +48,58 @@ export default function Skills() {
           <p>My skills include the following:</p>
         </div>
 
-        <div className="row skills-content">
-          <div id="skills-container">
-            <div className="text-center mb-4">
-              <div className="skill-filters d-flex flex-wrap justify-content-center">
-                {FILTERS.map((f) => (
-                  <button
-                    key={f}
-                    className={`filter-btn mt-2${filter === f ? ' active' : ''}`}
-                    data-filter={f}
-                    onClick={() => handleFilterClick(f)}
-                  >
-                    {f === 'all' ? 'All' : f.charAt(0).toUpperCase() + f.slice(1)}
-                  </button>
-                ))}
-              </div>
+        <div className="terminal-window">
+          <div className="terminal-titlebar">
+            <span className="terminal-dot dot-red"></span>
+            <span className="terminal-dot dot-yellow"></span>
+            <span className="terminal-dot dot-green"></span>
+            <span className="terminal-titlebar-name mono">piya@dossier:~/skills</span>
+          </div>
+
+          <div className="terminal-body">
+            <div className="terminal-line mono">
+              <span className="terminal-prompt">$</span> scan --stack
+              <span className="terminal-cursor"></span>
             </div>
 
-            <div className="row g-4" id="skills-grid">
-              {visibleSkills.map((skill) => (
-                <div className="col-md-2 col-sm-4 col-6 skill-item" data-category={skill.category} key={`${skill.category}-${skill.name}`}>
-                  <div className="skill-box">
-                    {iconMarkup(skill)}
-                    <h4>{skill.name}</h4>
-                  </div>
+            <div className="terminal-line terminal-meta mono">
+              <span className="terminal-ok">✓</span> {String(counts.all).padStart(2, '0')} tools indexed across {FILTERS.length - 1} categories
+            </div>
+
+            <div className="skill-filters">
+              {FILTERS.map((f) => (
+                <button
+                  key={f}
+                  className={`filter-btn${filter === f ? ' active' : ''}`}
+                  data-filter={f}
+                  onClick={() => handleFilterClick(f)}
+                >
+                  --{f}
+                  <span className="filter-count mono">{String(counts[f]).padStart(2, '0')}</span>
+                </button>
+              ))}
+            </div>
+
+            <div className="skill-matrix" id="skills-grid">
+              {filteredSkills.map((skill, index) => (
+                <div
+                  className="skill-cell"
+                  data-category={skill.category}
+                  key={`${skill.category}-${skill.name}`}
+                  style={{ '--cell-delay': `${(index % 12) * 25}ms` }}
+                >
+                  <span className="skill-index mono">{String(index + 1).padStart(2, '0')}</span>
+                  <span className="skill-cell-icon">{iconMarkup(skill)}</span>
+                  <span className="skill-cell-name">{skill.name}</span>
+                  <span className="skill-cell-tag mono">{skill.category}</span>
                 </div>
               ))}
             </div>
 
-            {hasMore && (
-              <div className="text-center mt-4">
-                <button
-                  className="filter-btn"
-                  id="show-more-btn"
-                  onClick={() => setVisibleCount((count) => count + ITEMS_PER_PAGE)}
-                >
-                  Show More
-                </button>
-              </div>
-            )}
+            <div className="terminal-line mono terminal-tail">
+              <span className="terminal-prompt">$</span>
+              <span className="terminal-cursor"></span>
+            </div>
           </div>
         </div>
       </div>
