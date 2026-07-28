@@ -24,11 +24,11 @@ export default function Preloader() {
   const commandDone = typedChars >= TYPED_COMMAND.length
 
   useEffect(() => {
-    document.body.style.overflow = 'hidden'
+    document.body.style.overflow = visible ? 'hidden' : ''
     return () => {
       document.body.style.overflow = ''
     }
-  }, [])
+  }, [visible])
 
   useEffect(() => {
     if (commandDone) return
