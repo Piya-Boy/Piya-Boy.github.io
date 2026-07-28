@@ -1,0 +1,24 @@
+src/components/layout/Preloader.jsx
+  s_8f833764440590::t_6aa7091dc6949c 27,31
+package.json
+  s_8f833764440590::t_41badffd2ecd56 10-11
+  s_8f833764440590::t_5bebcbaf6c607c 27
+package-lock.json
+  s_8f833764440590::t_11992c70bff3b6 24,1026-1063,1586-1602,1669-1681,1790-1806,1861-1873,1881-1887,2137-2166,2181-2190,2222-2280,2319-2333,2359-2381,2414-2441,2512-2521,2605-2617,2699-2751,2858-2867,2901-2910,2931-2999,3049-3069,3115-3125,3171-3194,3237-3246,3270-3292,3323-3358,3372-3381
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "3fc10d7a3192cb6733a6cce31b323cd26d0c9a5a",
+  "prompts": {},
+  "sessions": {
+    "s_8f833764440590": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "948bb760-fead-426f-b79d-7a77c41546fc",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Piya Miang-lae <piyaboy097@gmail.com>"
+    }
+  }
+}
