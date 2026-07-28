@@ -142,10 +142,12 @@ p {
 
 .preloader-term {
   width: min(460px, calc(100vw - 64px));
+  max-width: 100%;
   font-size: 13px;
   color: var(--ink-dim);
   text-align: left;
-  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-word;
 }
 
 .preloader-line {
@@ -153,14 +155,14 @@ p {
   animation: preloaderLineIn 0.2s ease;
 }
 
-.preloader-line:first-child {
-  color: #4fc3f7;
+.preloader-line.typed {
+  color: var(--ink);
   font-weight: 600;
 }
 
-.preloader-line:nth-child(3),
-.preloader-line:nth-child(4) {
-  color: var(--ink);
+.preloader-line.accent {
+  color: #4fc3f7;
+  font-weight: 600;
 }
 
 @keyframes preloaderLineIn {
