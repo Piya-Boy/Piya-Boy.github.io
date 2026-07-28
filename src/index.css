@@ -129,23 +129,64 @@ p {
   z-index: 9999;
   overflow: hidden;
   background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
 
-#preloader:before {
-  content: "";
-  position: fixed;
-  top: calc(50% - 15px);
-  left: calc(50% - 15px);
-  border: 2px solid var(--line);
-  border-top-color: var(--accent);
-  width: 30px;
-  height: 30px;
-  animation: animate-preloader 0.8s linear infinite;
+#preloader.fading {
+  opacity: 0;
 }
 
-@keyframes animate-preloader {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+.preloader-term {
+  width: min(460px, calc(100vw - 64px));
+  font-size: 13px;
+  color: var(--ink-dim);
+  text-align: left;
+  white-space: pre;
+}
+
+.preloader-line {
+  margin-bottom: 6px;
+  animation: preloaderLineIn 0.2s ease;
+}
+
+.preloader-line:first-child {
+  color: #4fc3f7;
+  font-weight: 600;
+}
+
+.preloader-line:nth-child(3),
+.preloader-line:nth-child(4) {
+  color: var(--ink);
+}
+
+@keyframes preloaderLineIn {
+  from { opacity: 0; transform: translateY(2px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.preloader-cursor {
+  display: inline-block;
+  width: 7px;
+  height: 13px;
+  background: var(--accent-bright);
+  vertical-align: middle;
+  margin-left: 2px;
+  animation: preloaderBlink 1s step-end infinite;
+}
+
+@keyframes preloaderBlink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #preloader { transition: none; }
+  .preloader-line { animation: none; }
+  .preloader-cursor { animation: none; }
 }
 
 @media screen and (max-width: 768px) {
