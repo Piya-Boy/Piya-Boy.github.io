@@ -1,0 +1,32 @@
+src/components/sections/Credentials.jsx
+  s_8f833764440590::t_11c704520daa6e 1-37,39-59,61-79
+  s_8f833764440590::t_c07f28aeb2e580 38
+  s_8f833764440590::t_70f5bc1c236aec 60
+src/components/layout/Header.jsx
+  s_8f833764440590::t_d416b7e8aea2d0 9
+.gitignore
+  s_8f833764440590::t_8967924653f482 16
+src/components/sections/credentialsData.js
+  s_8f833764440590::t_718057669c3ecf 1-31
+src/index.css
+  s_8f833764440590::t_78a942b680ad74 1859-1969
+src/App.jsx
+  s_8f833764440590::t_18e0fa14da5aa4 11
+  s_8f833764440590::t_3dc2936356117b 48
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.21",
+  "base_commit_sha": "5f26b8fd9f9f2f54b2098dee276703c06afb9a98",
+  "prompts": {},
+  "sessions": {
+    "s_8f833764440590": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "948bb760-fead-426f-b79d-7a77c41546fc",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Piya Miang-lae <piyaboy097@gmail.com>"
+    }
+  }
+}
