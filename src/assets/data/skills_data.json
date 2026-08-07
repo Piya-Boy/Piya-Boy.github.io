@@ -71,6 +71,10 @@
             "icon": "devicon-mysql-plain colored"
         },
         {
+            "name": "SQL Server",
+            "icon": "devicon-microsoftsqlserver-plain colored"
+        },
+        {
             "name": "MongoDB",
             "icon": "devicon-mongodb-plain colored"
         },
@@ -131,6 +135,22 @@
         {
             "name": "Cyber Security",
             "icon": "fas fa-shield-alt"
+        },
+        {
+            "name": "Claude",
+            "icon": "img"
+        },
+        {
+            "name": "Codex",
+            "icon": "img"
+        },
+        {
+            "name": "Cursor",
+            "icon": "img"
+        },
+        {
+            "name": "GitHub Copilot",
+            "icon": "img"
         },
         {
             "name": "Photoshop",

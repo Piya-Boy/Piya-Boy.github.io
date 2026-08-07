@@ -164,7 +164,9 @@ export default function TimelineStrip({ items }) {
                 <div className="strip-peek">
                   <div className="strip-peek-text">
                     <div className="strip-peek-title">{item.title}</div>
-                    <div className="strip-peek-type mono">{item.type === 'education' ? 'EDU' : 'WORK'}</div>
+                    <div className="strip-peek-type mono">
+                      {item.type === 'education' ? 'EDU' : item.subtitle === 'Intern' ? 'INTERN' : 'WORK'}
+                    </div>
                   </div>
                 </div>
 

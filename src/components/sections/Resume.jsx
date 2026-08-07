@@ -74,7 +74,7 @@ const WORK = [
     type: 'work',
     icon: 'fas fa-motorcycle',
     title: 'E-HONGMODDAENG MOTORBIKE COMPANY LIMITED',
-    date: '2025 — Present',
+    date: '2025 — Aug 2026',
     sortYear: 2025,
     subtitle: 'Programmer',
     location: 'Maha Sarakham, Thailand',
@@ -115,7 +115,7 @@ const WORK = [
     title: 'TSS Social Enterprise Company',
     date: '2021 — 2022',
     sortYear: 2021,
-    subtitle: 'Internship',
+    subtitle: 'Intern',
     location: 'Pattaya',
     points: [
       'Development of the Thai postal system',
