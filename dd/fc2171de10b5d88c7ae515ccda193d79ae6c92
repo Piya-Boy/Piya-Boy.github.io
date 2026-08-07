@@ -1,0 +1,27 @@
+src/assets/data/skills_data.json
+  s_8f833764440590::t_d5e65ff5a0c1d2 140-154
+  s_8f833764440590::t_f3f6e7feb91aa4 73-76,139
+src/components/sections/TimelineStrip.jsx
+  s_8f833764440590::t_2f0cb7ee14a0e9 167-169
+.gitignore
+  s_8f833764440590::t_df920dd3f4a77f 15
+src/components/sections/Resume.jsx
+  s_8f833764440590::t_63ac5bc2dbdfb1 77
+  s_8f833764440590::t_ecb563958c5bb8 118
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.21",
+  "base_commit_sha": "ddfc2171de10b5d88c7ae515ccda193d79ae6c92",
+  "prompts": {},
+  "sessions": {
+    "s_8f833764440590": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "948bb760-fead-426f-b79d-7a77c41546fc",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Piya Miang-lae <piyaboy097@gmail.com>"
+    }
+  }
+}
