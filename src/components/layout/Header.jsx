@@ -6,6 +6,7 @@ const NAV_ITEMS = [
   { hash: '#hero', id: 'hero', label: 'Home', icon: 'fas fa-house' },
   { hash: '#about', id: 'about', label: 'About', icon: 'fas fa-user' },
   { hash: '#resume', id: 'resume', label: 'Resume', icon: 'fas fa-file-lines' },
+  { hash: '#credentials', id: 'credentials', label: 'Credentials', icon: 'fas fa-award' },
   { hash: '#portfolio', id: 'portfolio', label: 'Portfolio', icon: 'fas fa-diagram-project' },
   { hash: '#contact', id: 'contact', label: 'Contact', icon: 'fas fa-envelope' },
 ]

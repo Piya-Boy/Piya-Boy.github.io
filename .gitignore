@@ -13,3 +13,4 @@ dist-ssr
 *.sln
 *.sw?
 .claude/
+.vite/

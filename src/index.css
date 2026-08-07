@@ -1857,6 +1857,117 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Credentials — awards + certificates in terminal frame
+--------------------------------------------------------------*/
+.cred-group {
+  margin-top: var(--space-4);
+}
+
+.cred-group-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--line);
+  margin-bottom: var(--space-2);
+}
+
+.cred-group-tag {
+  color: var(--accent);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
+.cred-group-count {
+  color: var(--ink-faint);
+  font-size: 11px;
+}
+
+.cred-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cred-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  transition: background 0.15s;
+}
+
+.cred-item:last-child {
+  border-bottom: none;
+}
+
+.cred-item:hover {
+  background: rgba(255, 106, 43, 0.05);
+}
+
+.cred-index {
+  color: var(--ink-faint);
+  font-size: 11px;
+  flex: 0 0 auto;
+  width: 20px;
+}
+
+.cred-icon {
+  color: var(--ink-dim);
+  font-size: 14px;
+  flex: 0 0 auto;
+  width: 18px;
+  text-align: center;
+  transition: color 0.15s;
+}
+
+.cred-award .cred-icon {
+  color: var(--accent);
+}
+
+.cred-item:hover .cred-icon {
+  color: var(--accent-bright);
+}
+
+.cred-text {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.cred-title {
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.cred-meta {
+  color: var(--ink-faint);
+  font-size: 11px;
+  margin-top: 2px;
+}
+
+.cred-date {
+  color: var(--ink-dim);
+  font-size: 11px;
+  flex: 0 0 auto;
+  white-space: nowrap;
+  text-align: right;
+}
+
+@media (max-width: 640px) {
+  .cred-item {
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+  .cred-date {
+    flex: 1 0 100%;
+    text-align: left;
+    padding-left: calc(20px + 18px + var(--space-3) * 2);
+  }
+}
+
+/*--------------------------------------------------------------
 # Portfolio — filed grid, caption on frame not overlay
 --------------------------------------------------------------*/
 .portfolio-container {
