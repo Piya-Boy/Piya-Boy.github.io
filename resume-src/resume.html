@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Piya Miang-Lae Resume</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  @page { size: 794px 1123px; margin: 0; }
+  html, body { width: 794px; }
+  body {
+    font-family: 'Inter', 'Noto Sans Thai', sans-serif;
+    color: #1f2937;
+    font-size: 12px;
+  }
+  .page {
+    width: 794px;
+    min-height: 1123px;
+    background: #fff;
+    page-break-after: always;
+    break-after: page;
+    position: relative;
+    outline: 1px dashed #d1d5db;
+    outline-offset: -1px;
+  }
+  .page:last-child { page-break-after: auto; break-after: auto; }
+
+  [contenteditable]:hover {
+    outline: 1px dashed #3fa796;
+    outline-offset: 2px;
+    cursor: text;
+  }
+  [contenteditable]:focus {
+    outline: 2px solid #3fa796;
+    outline-offset: 2px;
+  }
+
+  .toolbar {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    z-index: 999;
+    display: flex;
+    gap: 8px;
+    font-family: 'Inter', sans-serif;
+  }
+  .toolbar button {
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  .toolbar .export-btn { background: #3fa796; color: #fff; }
+  .toolbar .reset-btn { background: #e5e7eb; color: #374151; }
+
+  @media print {
+    .toolbar { display: none !important; }
+    .page { outline: none !important; }
+    [contenteditable]:hover, [contenteditable]:focus { outline: none !important; }
+  }
+
+  .header {
+    background: #1e3a5f;
+    color: #fff;
+    padding: 28px 36px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .header img {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255,255,255,0.3);
+  }
+  .header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  .header .role {
+    font-size: 12.5px;
+    font-weight: 500;
+    color: #7dd3c0;
+    margin-top: 4px;
+  }
+  .header .tagline {
+    font-size: 10px;
+    color: #c6d4e1;
+    margin-top: 6px;
+    letter-spacing: 0.3px;
+  }
+
+  .body {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 28px;
+    padding: 24px 36px 36px;
+  }
+
+  .sidebar h2, .main h2 {
+    font-size: 12px;
+    font-weight: 700;
+    color: #1e3a5f;
+    border-bottom: 2px solid #3fa796;
+    padding-bottom: 4px;
+    margin-bottom: 8px;
+    letter-spacing: 0.3px;
+  }
+  .sidebar section, .main section { margin-bottom: 16px; }
+
+  .field { margin-bottom: 9px; }
+  .field .label {
+    font-size: 9px;
+    font-weight: 700;
+    color: #6b7280;
+    letter-spacing: 0.4px;
+    margin-bottom: 1px;
+  }
+  .field .value { font-size: 10.5px; line-height: 1.4; }
+
+  .main h3 {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: #111827;
+  }
+  .main .sub {
+    font-size: 10.5px;
+    font-weight: 600;
+    color: #3fa796;
+    margin-top: 1px;
+  }
+  .entry { margin-bottom: 11px; }
+  .entry-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .entry-head .date { font-size: 9.5px; color: #6b7280; font-weight: 600; white-space: nowrap; }
+  .entry-loc { font-size: 9.5px; color: #6b7280; }
+  .entry ul { margin: 4px 0 0 14px; }
+  .entry li { font-size: 10px; line-height: 1.45; margin-bottom: 2px; }
+
+  .summary-text { font-size: 10.5px; line-height: 1.55; color: #374151; }
+
+  .award-item, .cert-item { margin-bottom: 7px; }
+  .item-head { display: flex; justify-content: space-between; align-items: baseline; }
+  .award-item h4, .cert-item h4 { font-size: 10.5px; font-weight: 700; }
+  .award-item .meta, .cert-item .meta { font-size: 9.5px; color: #6b7280; }
+  .item-head .date { font-size: 9.5px; color: #6b7280; font-weight: 600; white-space: nowrap; }
+
+  a { color: inherit; text-decoration: none; }
+  img { -webkit-user-drag: none; user-select: none; }
+</style>
+</head>
+<body contenteditable="true" spellcheck="false">
+
+<div class="toolbar" contenteditable="false">
+  <button class="reset-btn" onclick="if(confirm('รีเซ็ตกลับเนื้อหาเดิม? ของที่แก้จะหายหมด')) location.reload()">Reset</button>
+  <button class="export-btn" onclick="window.print()">Export PDF</button>
+</div>
+
+<!-- PAGE 1: ENGLISH -->
+<div class="page">
+  <div class="header">
+    <img src="profile.jpg" alt="Piya Miang-Lae" draggable="false" contenteditable="false">
+    <div>
+      <h1>PIYA MIANG-LAE</h1>
+      <div class="role">FULL-STACK DEVELOPER | CYBERSECURITY CONSULTANT</div>
+      <div class="tagline">BUILDING RELIABLE SOFTWARE. SECURING DIGITAL SYSTEMS.</div>
+    </div>
+  </div>
+
+  <div class="body">
+    <div class="sidebar">
+      <section>
+        <h2>CONTACT</h2>
+        <div class="field"><div class="label">LOCATION</div><div class="value">Chiang Rai, Thailand</div></div>
+        <div class="field"><div class="label">PHONE</div><div class="value">+66 63 171 3123</div></div>
+        <div class="field"><div class="label">EMAIL</div><div class="value">piyamianglae.b@gmail.com</div></div>
+        <div class="field"><div class="label">PORTFOLIO</div><div class="value">piya-boy.github.io</div></div>
+      </section>
+
+      <section>
+        <h2>PROFILES</h2>
+        <div class="field"><div class="value">GitHub: github.com/Piya-Boy</div></div>
+        <div class="field"><div class="value">LinkedIn: piya-miang-lae-6167392a5</div></div>
+      </section>
+
+      <section>
+        <h2>SKILLS</h2>
+        <div class="field"><div class="label">LANGUAGES</div><div class="value">JavaScript, TypeScript, PHP, Python, Dart, VBA, C</div></div>
+        <div class="field"><div class="label">FRONTEND</div><div class="value">React, Next.js, Vue.js, Flutter, Tailwind CSS, Bootstrap</div></div>
+        <div class="field"><div class="label">BACKEND</div><div class="value">Node.js, CodeIgniter, REST APIs</div></div>
+        <div class="field"><div class="label">DATA</div><div class="value">MySQL, PostgreSQL, SQL Server, MongoDB, Supabase, Prisma</div></div>
+        <div class="field"><div class="label">SECURITY</div><div class="value">Cybersecurity assessment, threat intelligence, security policies</div></div>
+        <div class="field"><div class="label">TOOLS</div><div class="value">Git, GitHub, Postman, Power BI, Power Automate, Figma, Claude Code, Codex, Cursor</div></div>
+      </section>
+
+      <section>
+        <h2>EDUCATION</h2>
+        <div class="field">
+          <div class="value"><strong>Bachelor's Degree - Digital Business</strong></div>
+          <div class="label" style="margin-top:2px;">Siam Technological College | 2023 - Present</div>
+        </div>
+        <div class="field" style="margin-top:8px;">
+          <div class="value"><strong>High Vocational Certificate - Digital Business Technology</strong></div>
+          <div class="label" style="margin-top:2px;">Pattaya Redemptorist Technological College | 2023 - 2025</div>
+        </div>
+        <div class="field" style="margin-top:8px;">
+          <div class="value"><strong>Vocational Certificate - Information Technology</strong></div>
+          <div class="label" style="margin-top:2px;">Pattaya Redemptorist Technological College | 2020 - 2022</div>
+        </div>
+      </section>
+    </div>
+
+    <div class="main">
+      <section>
+        <h2>SUMMARY</h2>
+        <p class="summary-text">Full-stack developer and cybersecurity consultant experienced in building web and business systems, assessing security infrastructure, and translating operational needs into maintainable software. Comfortable across frontend, backend, databases, automation, and cyber threat intelligence.</p>
+      </section>
+
+      <section>
+        <h2>EXPERIENCE</h2>
+
+        <div class="entry">
+          <div class="entry-head"><h3>SOSECURE CO., LTD.</h3><div class="date">2025 - Present</div></div>
+          <div class="entry-head"><div class="sub">Cybersecurity Consultant</div><div class="entry-loc">Bangkok, Thailand</div></div>
+          <ul>
+            <li>Assess security infrastructure and recommend practical improvements for clients.</li>
+            <li>Develop security policies and procedures aligned with organizational needs.</li>
+            <li>Built tools and systems supporting cyber threat intelligence operations.</li>
+            <li>Built a phishing and typosquatting detection system for brand domain abuse.</li>
+            <li>Built a real-time data leak monitoring bot for early breach detection.</li>
+            <li>Built an IOC (Indicators of Compromise) checker against threat intelligence databases.</li>
+            <li>Built a malware scanning tool for Linux-based servers.</li>
+            <li>Proactively assessed risk and monitored threats to protect client organizations.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head"><h3>EHONG MODDAENG MOTOR CO., LTD.</h3><div class="date">2025 - Aug 2026</div></div>
+          <div class="entry-head"><div class="sub">Programmer</div><div class="entry-loc">Maha Sarakham, Thailand</div></div>
+          <ul>
+            <li>Developed and maintained software supporting motorbike business operations.</li>
+            <li>Collaborated with stakeholders and teammates to deliver reliable product updates.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head"><h3>NATIONAL CYBER SECURITY AGENCY (NCSA)</h3><div class="date">Nov 2024 - Feb 2025</div></div>
+          <div class="entry-head"><div class="sub">Cybersecurity Intern</div><div class="entry-loc">Bangkok, Thailand</div></div>
+          <ul>
+            <li>Developed an AI/NLP cyber threat intelligence tracking system to support cyber intelligence operations.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head"><h3>FREELANCE</h3><div class="date">2023 - 2025</div></div>
+          <div class="entry-head"><div class="sub">Full-Stack Developer</div><div class="entry-loc">Pattaya, Thailand</div></div>
+          <ul>
+            <li>Built custom web applications and worked directly with clients from requirements through delivery.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head"><h3>TSS SOCIAL ENTERPRISE COMPANY LIMITED</h3><div class="date">2021 - 2022</div></div>
+          <div class="entry-head"><div class="sub">Software Development Intern</div><div class="entry-loc">Pattaya, Thailand</div></div>
+          <ul>
+            <li>Contributed to a Thai postal system using Vue.js and .NET.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>AWARDS</h2>
+        <div class="award-item">
+          <div class="item-head"><h4>Gold Medal - Computer Programming Skills</h4><span class="date">Feb 2024</span></div>
+          <div class="meta">Higher Vocational Certificate level</div>
+        </div>
+        <div class="award-item">
+          <div class="item-head"><h4>Gold Medal - Computer Programming Skills</h4><span class="date">Feb 2023</span></div>
+          <div class="meta">Vocational Certificate level</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>CERTIFICATIONS</h2>
+        <div class="cert-item item-head"><h4>Thailand Cyber Top Talent 2024</h4><span class="date">Oct 2024</span></div>
+        <div class="cert-item item-head"><h4>Code Camp Academy - Full-Stack Developer Training</h4><span class="date">Nov 2023 - Mar 2024</span></div>
+        <div class="cert-item item-head"><h4>Thailand Cyber Top Talent 2023</h4><span class="date">Sep 2023</span></div>
+        <div class="cert-item item-head"><h4>Fundamental Cybersecurity Course</h4><span class="date">Feb 2023</span></div>
+        <div class="cert-item item-head"><h4>Web Application Development and Python Programming</h4><span class="date">Mar 2022</span></div>
+        <div class="cert-item item-head"><h4>Global IT Challenge for Youth with Disabilities</h4><span class="date">Oct 2021</span></div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 2: THAI -->
+<div class="page">
+  <div class="header">
+    <img src="profile.jpg" alt="ปิยะ เมียงแล" draggable="false" contenteditable="false">
+    <div>
+      <h1>ปิยะ เมียงแล</h1>
+      <div class="role">นักพัฒนาซอฟต์แวร์ | ที่ปรึกษาด้านความมั่นคงปลอดภัยไซเบอร์</div>
+      <div class="tagline">BUILDING RELIABLE SOFTWARE. SECURING DIGITAL SYSTEMS.</div>
+    </div>
+  </div>
+
+  <div class="body">
+    <div class="sidebar">
+      <section>
+        <h2>ข้อมูลติดต่อ</h2>
+        <div class="field"><div class="label">ที่อยู่</div><div class="value">เชียงราย ประเทศไทย</div></div>
+        <div class="field"><div class="label">โทรศัพท์</div><div class="value">+66 63 171 3123</div></div>
+        <div class="field"><div class="label">อีเมล</div><div class="value">piyamianglae.b@gmail.com</div></div>
+        <div class="field"><div class="label">เว็บไซต์</div><div class="value">piya-boy.github.io</div></div>
+      </section>
+
+      <section>
+        <h2>โปรไฟล์</h2>
+        <div class="field"><div class="value">GitHub: github.com/Piya-Boy</div></div>
+        <div class="field"><div class="value">LinkedIn: piya-miang-lae-6167392a5</div></div>
+      </section>
+
+      <section>
+        <h2>ทักษะ</h2>
+        <div class="field"><div class="label">ภาษาโปรแกรม</div><div class="value">JavaScript, TypeScript, PHP, Python, Dart, VBA, C</div></div>
+        <div class="field"><div class="label">ฟรอนต์เอนด์</div><div class="value">React, Next.js, Vue.js, Flutter, Tailwind CSS, Bootstrap</div></div>
+        <div class="field"><div class="label">แบ็กเอนด์</div><div class="value">Node.js, CodeIgniter, REST APIs</div></div>
+        <div class="field"><div class="label">ฐานข้อมูล</div><div class="value">MySQL, PostgreSQL, SQL Server, MongoDB, Supabase, Prisma</div></div>
+        <div class="field"><div class="label">ความปลอดภัย</div><div class="value">การประเมินความมั่นคงปลอดภัยไซเบอร์, ข่าวกรองภัยคุกคาม, นโยบายความปลอดภัย</div></div>
+        <div class="field"><div class="label">เครื่องมือ</div><div class="value">Git, GitHub, Postman, Power BI, Power Automate, Figma, Claude Code, Codex, Cursor</div></div>
+      </section>
+
+      <section>
+        <h2>การศึกษา</h2>
+        <div class="field">
+          <div class="value"><strong>ปริญญาตรี สาขาธุรกิจดิจิทัล</strong></div>
+          <div class="label" style="margin-top:2px;">วิทยาลัยเทคโนโลยีสยาม | 2566 - ปัจจุบัน</div>
+        </div>
+        <div class="field" style="margin-top:8px;">
+          <div class="value"><strong>ปวส. สาขาเทคโนโลยีธุรกิจดิจิทัล</strong></div>
+          <div class="label" style="margin-top:2px;">วิทยาลัยเทคโนโลยีพระมหาไถ่ พัทยา | 2566 - 2568</div>
+        </div>
+        <div class="field" style="margin-top:8px;">
+          <div class="value"><strong>ปวช. สาขาเทคโนโลยีสารสนเทศ</strong></div>
+          <div class="label" style="margin-top:2px;">วิทยาลัยเทคโนโลยีพระมหาไถ่ พัทยา | 2563 - 2565</div>
+        </div>
+      </section>
+    </div>
+
+    <div class="main">
+      <section>
+        <h2>ประวัติย่อ</h2>
+        <p class="summary-text">นักพัฒนาซอฟต์แวร์และที่ปรึกษาด้านความมั่นคงปลอดภัยไซเบอร์ มีประสบการณ์พัฒนาเว็บไซต์และระบบธุรกิจ ประเมินโครงสร้างพื้นฐานด้านความปลอดภัย และแปลงความต้องการของงานให้เป็นซอฟต์แวร์ที่ดูแลรักษาต่อได้ง่าย ทำงานได้ครอบคลุมทั้ง Frontend, Backend, ฐานข้อมูล ระบบอัตโนมัติ และข่าวกรองภัยคุกคามไซเบอร์</p>
+      </section>
+
+      <section>
+        <h2>ประสบการณ์ทำงาน</h2>
+
+        <div class="entry">
+          <div class="entry-head"><h3>บริษัท โซซีเคียว จำกัด</h3><div class="date">2568 - ปัจจุบัน</div></div>
+          <div class="entry-head"><div class="sub">ที่ปรึกษาด้านความมั่นคงปลอดภัยไซเบอร์</div><div class="entry-loc">กรุงเทพฯ</div></div>
+          <ul>
+            <li>ประเมินโครงสร้างพื้นฐานด้านความมั่นคงปลอดภัย พร้อมเสนอแนวทางปรับปรุงที่นำไปใช้ได้จริง</li>
+            <li>จัดทำนโยบายและขั้นตอนด้านความปลอดภัยให้สอดคล้องกับความต้องการขององค์กร</li>
+            <li>พัฒนาเครื่องมือและระบบสนับสนุนงานด้านข่าวกรองภัยคุกคามไซเบอร์ (Cyber Threat Intelligence)</li>
+            <li>พัฒนาระบบตรวจจับเว็บไซต์ฟิชชิ่งและโดเมนแอบอ้างแบรนด์ (Phishing & Typosquatting Detection)</li>
+            <li>พัฒนาบอทเฝ้าระวังและแจ้งเตือนข้อมูลรั่วไหล (Data Leak Monitoring) แบบเรียลไทม์</li>
+            <li>พัฒนาเครื่องมือตรวจสอบ IOC (Indicators of Compromise) เทียบกับฐานข้อมูล threat intelligence</li>
+            <li>พัฒนาเครื่องมือสแกนหามัลแวร์บนเซิร์ฟเวอร์ตระกูล Linux</li>
+            <li>ประเมินความเสี่ยงและเฝ้าระวังภัยคุกคามเชิงรุก เพื่อป้องกันความเสียหายให้กับองค์กรลูกค้า</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head"><h3>บริษัท อีฮงมดแดงมอเตอร์ จำกัด</h3><div class="date">2568 - ส.ค. 2569</div></div>
+          <div class="entry-head"><div class="sub">โปรแกรมเมอร์</div><div class="entry-loc">มหาสารคาม</div></div>
+          <ul>
+            <li>พัฒนาและปรับปรุงระบบงานภายในของบริษัท</li>
+            <li>ดูแลระบบหลังบ้านร่วมกับทีม แก้ไขปัญหาและปรับปรุงให้ใช้งานได้ราบรื่นต่อเนื่อง</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head"><h3>สำนักงานคณะกรรมการการรักษาความมั่นคงปลอดภัยไซเบอร์แห่งชาติ (สกมช.)</h3><div class="date">พ.ย. 2567 - ก.พ. 2568</div></div>
+          <div class="entry-head"><div class="sub">นักศึกษาฝึกงานด้านความมั่นคงปลอดภัยไซเบอร์</div><div class="entry-loc">กรุงเทพฯ</div></div>
+          <ul>
+            <li>พัฒนาระบบติดตามข่าวกรองภัยคุกคามไซเบอร์ด้วย AI และ NLP เพื่อสนับสนุนงานข่าวกรองไซเบอร์</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head"><h3>ฟรีแลนซ์</h3><div class="date">2566 - 2568</div></div>
+          <div class="entry-head"><div class="sub">นักพัฒนาซอฟต์แวร์</div><div class="entry-loc">พัทยา</div></div>
+          <ul>
+            <li>พัฒนาเว็บแอปพลิเคชันตามความต้องการของลูกค้า ดูแลตั้งแต่เก็บความต้องการจนถึงส่งมอบงาน</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head"><h3>บริษัท ทีเอสเอส วิสาหกิจเพื่อสังคม จำกัด</h3><div class="date">2564 - 2565</div></div>
+          <div class="entry-head"><div class="sub">นักศึกษาฝึกงานด้านพัฒนาซอฟต์แวร์</div><div class="entry-loc">พัทยา</div></div>
+          <ul>
+            <li>มีส่วนร่วมพัฒนาระบบไปรษณีย์ไทยด้วย Vue.js และ .NET</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>รางวัล</h2>
+        <div class="award-item">
+          <div class="item-head"><h4>เหรียญทอง ทักษะการเขียนโปรแกรมคอมพิวเตอร์</h4><span class="date">ก.พ. 2567</span></div>
+          <div class="meta">ระดับ ปวส.</div>
+        </div>
+        <div class="award-item">
+          <div class="item-head"><h4>เหรียญทอง ทักษะการเขียนโปรแกรมคอมพิวเตอร์</h4><span class="date">ก.พ. 2566</span></div>
+          <div class="meta">ระดับ ปวช.</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>ใบรับรอง</h2>
+        <div class="cert-item item-head"><h4>Thailand Cyber Top Talent 2024</h4><span class="date">ต.ค. 2567</span></div>
+        <div class="cert-item item-head"><h4>Code Camp Academy - หลักสูตรฝึกอบรม Full-Stack Developer</h4><span class="date">พ.ย. 2566 - มี.ค. 2567</span></div>
+        <div class="cert-item item-head"><h4>Thailand Cyber Top Talent 2023</h4><span class="date">ก.ย. 2566</span></div>
+        <div class="cert-item item-head"><h4>หลักสูตรความมั่นคงปลอดภัยไซเบอร์ระดับพื้นฐาน</h4><span class="date">ก.พ. 2566</span></div>
+        <div class="cert-item item-head"><h4>การพัฒนาเว็บแอปพลิเคชันและการเขียนโปรแกรม Python</h4><span class="date">มี.ค. 2565</span></div>
+        <div class="cert-item item-head"><h4>Global IT Challenge for Youth with Disabilities</h4><span class="date">ต.ค. 2564</span></div>
+      </section>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

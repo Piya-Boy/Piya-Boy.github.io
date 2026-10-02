@@ -73,7 +73,7 @@ const WORK = [
   {
     type: 'work',
     icon: 'fas fa-motorcycle',
-    title: 'E-HONGMODDAENG MOTORBIKE COMPANY LIMITED',
+    title: 'EHONG MODDAENG MOTOR CO., LTD.',
     date: '2025 — Aug 2026',
     sortYear: 2025,
     subtitle: 'Programmer',
@@ -112,7 +112,7 @@ const WORK = [
   {
     type: 'work',
     icon: 'fas fa-building',
-    title: 'TSS Social Enterprise Company',
+    title: 'TSS Social Enterprise Company Limited',
     date: '2021 — 2022',
     sortYear: 2021,
     subtitle: 'Intern',
