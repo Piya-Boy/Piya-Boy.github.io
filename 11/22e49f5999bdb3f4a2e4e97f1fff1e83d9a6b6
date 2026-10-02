@@ -1,0 +1,62 @@
+resume-src/resume.html
+  s_b9e29ce526a4c6::t_82d5d1efafa444 333
+  s_b9e29ce526a4c6::t_230a6777e972b9 224
+  s_b9e29ce526a4c6::t_1d0ed8a9535a55 196
+  s_b9e29ce526a4c6::t_1dfdc1b52df5df 158
+  s_b9e29ce526a4c6::t_b6a697112b62df 311,362,402
+  s_b9e29ce526a4c6::t_bf2d58a8c554c0 378
+  s_b9e29ce526a4c6::t_240b3d85d04e37 202
+  s_b9e29ce526a4c6::t_6c5dabb83a53ac 388
+  s_b9e29ce526a4c6::t_b1faa20c0d3ff0 161-166
+  s_b9e29ce526a4c6::t_0773460f88633d 430
+  s_b9e29ce526a4c6::t_be15b9fdf9772d 240
+  s_b9e29ce526a4c6::t_cf9e81ae942613 241
+  s_b9e29ce526a4c6::t_dca5ea672e0d32 384
+  s_b9e29ce526a4c6::t_c05806db227e32 247
+  s_b9e29ce526a4c6::t_76ec8d7c103c4d 293
+  s_b9e29ce526a4c6::t_af45dd10564b96 377
+  s_b9e29ce526a4c6::t_c59db37ed8e580 235-236
+  s_b9e29ce526a4c6::t_5bd73c1883c438 372-373
+  s_b9e29ce526a4c6::t_5acf317be420f4 283-284,287-288
+  s_b9e29ce526a4c6::t_886d26be383e55 361
+  s_b9e29ce526a4c6::t_5ce7727cd7ee88 19,24-25,28-64
+  s_b9e29ce526a4c6::t_a7aa38cc389fe3 141
+  s_b9e29ce526a4c6::t_2318bbddcc6c95 374,379
+  s_b9e29ce526a4c6::t_1ed4b6fdb23686 327
+  s_b9e29ce526a4c6::t_4b6c824ddaacdb 431-436
+  s_b9e29ce526a4c6::t_e9eac7a5832e2f 369
+  s_b9e29ce526a4c6::t_2f1fa4bf064bc9 375-376
+  s_b9e29ce526a4c6::t_b308bd2c411dfc 272
+  s_b9e29ce526a4c6::t_6f543fb65a7352 409
+  s_b9e29ce526a4c6::t_e42283c9c8d2a9 171
+  s_b9e29ce526a4c6::t_1138868b6b737b 237,242
+  s_b9e29ce526a4c6::t_19d7ac68970371 294-299
+  s_b9e29ce526a4c6::t_71b26d22d10f96 339
+  s_b9e29ce526a4c6::t_9580ec1d755f51 1-18,20-23,26-27,65-140,142-151,153-154,156-157,159-160,167-170,172-195,197-201,203-223,225-234,243-246,248-271,273-282,285-286,289-292,300-307,309-310,312-326,328-332,334-338,340-360,363-368,370-371,380-383,385-386,389-401,403-408,410-419,422-423,426-429,437-443
+  s_b9e29ce526a4c6::t_d900870ba6a571 387
+  s_b9e29ce526a4c6::t_99bb283958f090 420-421,424-425
+  s_b9e29ce526a4c6::t_607c0b84e4c9b2 308
+  s_b9e29ce526a4c6::t_262c507f21c364 152,155
+  s_b9e29ce526a4c6::t_73718fe434bd17 238-239
+src/index.css
+  s_b9e29ce526a4c6::t_c4d96d8683f4f3 855-856
+src/components/sections/Resume.jsx
+  s_b9e29ce526a4c6::t_d799858ca6d6d7 76
+  s_b9e29ce526a4c6::t_8e3421c58090a6 115
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "1122e49f5999bdb3f4a2e4e97f1fff1e83d9a6b6",
+  "prompts": {},
+  "sessions": {
+    "s_b9e29ce526a4c6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "cc8fa3fe-e72f-4214-ab26-a053782018b5",
+        "model": "unknown"
+      },
+      "human_author": "Piya Miang-lae <piyaboy097@gmail.com>"
+    }
+  }
+}
