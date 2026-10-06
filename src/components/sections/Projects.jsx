@@ -206,11 +206,23 @@ export default function Projects() {
                   <span className="proj-modal-cursor"></span>
                 </div>
                 <div className="proj-modal-links">
-                  {active.links.map((l) => (
-                    <span className={`proj-modal-link mono${l.primary ? ' primary' : ''}`} key={l.label}>
-                      {l.label}
-                    </span>
-                  ))}
+                  {active.links.map((l) =>
+                    l.href ? (
+                      <a
+                        className={`proj-modal-link mono${l.primary ? ' primary' : ''}`}
+                        key={l.label}
+                        href={l.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {l.label}
+                      </a>
+                    ) : (
+                      <span className={`proj-modal-link mono${l.primary ? ' primary' : ''}`} key={l.label}>
+                        {l.label}
+                      </span>
+                    )
+                  )}
                 </div>
               </div>
             </div>
