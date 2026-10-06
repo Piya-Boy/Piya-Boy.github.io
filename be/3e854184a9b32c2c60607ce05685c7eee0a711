@@ -1,0 +1,21 @@
+src/components/sections/projectsData.js
+  s_bb21035c5e3750::t_ecd18c6a7cf904 104-193
+src/components/sections/Projects.jsx
+  s_bb21035c5e3750::t_d1c4d46e2b11bf 209-225
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "be3e854184a9b32c2c60607ce05685c7eee0a711",
+  "prompts": {},
+  "sessions": {
+    "s_bb21035c5e3750": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "cdd94afa-cb01-4ceb-991e-1991a7a2f211",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Piya Miang-lae <piyaboy097@gmail.com>"
+    }
+  }
+}
