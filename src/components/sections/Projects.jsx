@@ -1,7 +1,50 @@
 import { useEffect, useRef, useState } from 'react'
 import { PROJECTS } from './projectsData'
 
-const BENTO_PATTERN = ['lg', 'tall', 'sm', 'sm', 'md', 'sm', 'sm']
+const SHAPE_WEIGHTS = [
+  ['sm', 5],
+  ['md', 2],
+  ['tall', 2],
+  ['lg', 1],
+]
+
+// deterministic pseudo-random hash so the layout is stable across renders
+// but doesn't read as an obvious repeating cycle
+function hashSeed(str) {
+  let h = 0
+  for (let i = 0; i < str.length; i++) {
+    h = (h * 31 + str.charCodeAt(i)) >>> 0
+  }
+  return h
+}
+
+function pickShape(seed, prevShape) {
+  const totalWeight = SHAPE_WEIGHTS.reduce((sum, [, w]) => sum + w, 0)
+  const roll = seed % totalWeight
+  let acc = 0
+  for (const [shape, weight] of SHAPE_WEIGHTS) {
+    acc += weight
+    if (roll < acc) {
+      // avoid two big shapes back-to-back — it reads as repetition
+      if ((shape === 'lg' || shape === 'tall') && shape === prevShape) {
+        return 'sm'
+      }
+      return shape
+    }
+  }
+  return 'sm'
+}
+
+function getBentoShapes(projects) {
+  const shapes = []
+  let prevShape = null
+  for (const p of projects) {
+    const shape = pickShape(hashSeed(p.id), prevShape)
+    shapes.push(shape)
+    prevShape = shape
+  }
+  return shapes
+}
 
 function TagList({ tags, max }) {
   const shown = max ? tags.slice(0, max) : tags
@@ -19,6 +62,7 @@ function TagList({ tags, max }) {
 export default function Projects() {
   const [activeId, setActiveId] = useState(null)
   const bodyRef = useRef(null)
+  const bentoShapes = PROJECTS.length === 1 ? ['lg'] : getBentoShapes(PROJECTS)
   const active = PROJECTS.find((p) => p.id === activeId) || null
 
   useEffect(() => {
@@ -48,8 +92,8 @@ export default function Projects() {
         </div>
 
         <div className="projects-grid">
-          {PROJECTS.map((p, i) => {
-            const size = PROJECTS.length === 1 ? 'lg' : BENTO_PATTERN[i % BENTO_PATTERN.length]
+          {bentoShapes.map((size, i) => {
+            const p = PROJECTS[i]
             return (
             <div
               className={`project-card ${size}`}
