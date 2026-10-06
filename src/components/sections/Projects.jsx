@@ -1,0 +1,138 @@
+import { useEffect, useRef, useState } from 'react'
+import { PROJECTS } from './projectsData'
+
+function TagList({ tags, max }) {
+  const shown = max ? tags.slice(0, max) : tags
+  const hidden = max ? tags.length - max : 0
+  return (
+    <>
+      {shown.map((t) => (
+        <span className="tech-tag" key={t}>{t}</span>
+      ))}
+      {hidden > 0 && <span className="tech-tag more">+{hidden}</span>}
+    </>
+  )
+}
+
+export default function Projects() {
+  const [activeId, setActiveId] = useState(null)
+  const bodyRef = useRef(null)
+  const active = PROJECTS.find((p) => p.id === activeId) || null
+
+  useEffect(() => {
+    if (!activeId) return
+    const onKey = (e) => {
+      if (e.key === 'Escape') setActiveId(null)
+    }
+    document.addEventListener('keydown', onKey)
+    return () => document.removeEventListener('keydown', onKey)
+  }, [activeId])
+
+  useEffect(() => {
+    if (!activeId || !bodyRef.current) return
+    bodyRef.current.querySelectorAll('.m-reveal').forEach((el) => {
+      el.style.animation = 'none'
+      el.getBoundingClientRect()
+      el.style.animation = ''
+    })
+  }, [activeId])
+
+  return (
+    <section id="projects" className="projects section-bg">
+      <div className="container" data-aos="fade-up">
+        <div className="section-title">
+          <h2>Projects</h2>
+          <p>Selected Work</p>
+        </div>
+
+        <div className="projects-grid">
+          {PROJECTS.map((p, i) => (
+            <div
+              className={`project-card ${i === 0 ? 'lg' : 'sm'}`}
+              key={p.id}
+              onClick={() => setActiveId(p.id)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') setActiveId(p.id)
+              }}
+            >
+              <div className="project-card-glyph">
+                <img src={`/img/projects/${p.cover}`} alt="" loading="lazy" />
+              </div>
+              <div className="project-card-content">
+                <h3>{p.title}</h3>
+                <p className="desc">{p.short}</p>
+                <div className="project-card-tags">
+                  <TagList tags={p.tags} max={i === 0 ? 5 : 3} />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {active && (
+        <div className="proj-modal-overlay open" role="dialog" aria-modal="true" aria-label={active.title}>
+          <div className="proj-modal-scrim" onClick={() => setActiveId(null)} />
+          <div className="proj-modal-case">
+            <div className="proj-modal-titlebar mono">
+              <span className="proj-modal-dot r"></span>
+              <span className="proj-modal-dot y"></span>
+              <span className="proj-modal-dot g"></span>
+              <span className="proj-modal-path">
+                ~/projects/{active.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}
+              </span>
+              <button className="proj-modal-close mono" onClick={() => setActiveId(null)}>
+                CLOSE [ESC]
+              </button>
+            </div>
+            <div className="proj-modal-body" ref={bodyRef}>
+              <div className="proj-modal-line m-reveal mono" style={{ '--rd': '0ms' }}>
+                <span className="proj-modal-prompt">$</span> open ./cover.img
+              </div>
+              <div className="proj-modal-cover m-reveal" style={{ '--rd': '90ms' }}>
+                <img src={`/img/projects/${active.cover}`} alt="" />
+              </div>
+              <h2 className="m-reveal" style={{ '--rd': '180ms' }}>{active.title}</h2>
+              <div className="proj-modal-meta m-reveal" style={{ '--rd': '230ms' }}>
+                {active.role} · {active.timeline} · {active.status}
+              </div>
+              <p className="proj-modal-lead m-reveal" style={{ '--rd': '280ms' }}>{active.lead}</p>
+
+              <div className="proj-modal-section m-reveal" style={{ '--rd': '340ms' }}>
+                <h3 className="mono">// what it does</h3>
+                <ul>
+                  {active.features.map((f) => (
+                    <li key={f}>{f}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="proj-modal-section m-reveal" style={{ '--rd': '420ms' }}>
+                <h3 className="mono">// tech stack</h3>
+                <div className="proj-modal-tags">
+                  <TagList tags={active.tags} />
+                </div>
+              </div>
+
+              <div className="proj-modal-section m-reveal" style={{ marginBottom: 0, '--rd': '500ms' }}>
+                <div className="proj-modal-line mono">
+                  <span className="proj-modal-prompt">$</span> cat ./links.txt
+                  <span className="proj-modal-cursor"></span>
+                </div>
+                <div className="proj-modal-links">
+                  {active.links.map((l) => (
+                    <span className={`proj-modal-link mono${l.primary ? ' primary' : ''}`} key={l.label}>
+                      {l.label}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </section>
+  )
+}

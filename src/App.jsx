@@ -9,6 +9,7 @@ import About from './components/sections/About'
 import Resume from './components/sections/Resume'
 import Skills from './components/sections/Skills'
 import Credentials from './components/sections/Credentials'
+import Projects from './components/sections/Projects'
 import Portfolio from './components/sections/Portfolio'
 import Contact from './components/sections/Contact'
 import { scrollToHash } from './hooks/useSmoothScroll'
@@ -46,6 +47,7 @@ export default function App() {
         <Resume />
         <Skills />
         <Credentials />
+        <Projects />
         <Portfolio />
         <Contact />
       </main>
