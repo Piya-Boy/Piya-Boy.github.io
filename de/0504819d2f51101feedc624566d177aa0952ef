@@ -1,0 +1,19 @@
+src/components/sections/projectsData.js
+  s_bb21035c5e3750::t_6abdc9b6193033 19-155
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "de0504819d2f51101feedc624566d177aa0952ef",
+  "prompts": {},
+  "sessions": {
+    "s_bb21035c5e3750": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "cdd94afa-cb01-4ceb-991e-1991a7a2f211",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Piya Miang-lae <piyaboy097@gmail.com>"
+    }
+  }
+}
