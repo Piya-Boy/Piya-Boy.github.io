@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import { PROJECTS } from './projectsData'
 
+const BENTO_PATTERN = ['lg', 'md', 'sm', 'sm', 'md', 'sm']
+
 function TagList({ tags, max }) {
   const shown = max ? tags.slice(0, max) : tags
   const hidden = max ? tags.length - max : 0
@@ -46,9 +48,11 @@ export default function Projects() {
         </div>
 
         <div className="projects-grid">
-          {PROJECTS.map((p, i) => (
+          {PROJECTS.map((p, i) => {
+            const size = PROJECTS.length === 1 ? 'lg' : BENTO_PATTERN[i % BENTO_PATTERN.length]
+            return (
             <div
-              className={`project-card ${i === 0 ? 'lg' : 'sm'}`}
+              className={`project-card ${size}`}
               key={p.id}
               onClick={() => setActiveId(p.id)}
               role="button"
@@ -64,11 +68,12 @@ export default function Projects() {
                 <h3>{p.title}</h3>
                 <p className="desc">{p.short}</p>
                 <div className="project-card-tags">
-                  <TagList tags={p.tags} max={i === 0 ? 5 : 3} />
+                  <TagList tags={p.tags} max={size === 'lg' ? 5 : 3} />
                 </div>
               </div>
             </div>
-          ))}
+            )
+          })}
         </div>
       </div>
 
