@@ -59,11 +59,18 @@ function TagList({ tags, max }) {
   )
 }
 
+const PAGE_SIZE = 8
+
 export default function Projects() {
   const [activeId, setActiveId] = useState(null)
+  const [page, setPage] = useState(0)
   const bodyRef = useRef(null)
-  const bentoShapes = PROJECTS.length === 1 ? ['lg'] : getBentoShapes(PROJECTS)
+  const pageCount = Math.ceil(PROJECTS.length / PAGE_SIZE)
+  const pageProjects = PROJECTS.slice(page * PAGE_SIZE, page * PAGE_SIZE + PAGE_SIZE)
+  const bentoShapes = pageProjects.length === 1 ? ['lg'] : getBentoShapes(pageProjects)
   const active = PROJECTS.find((p) => p.id === activeId) || null
+
+  const goToPage = (n) => setPage(Math.max(0, Math.min(pageCount - 1, n)))
 
   useEffect(() => {
     if (!activeId) return
@@ -93,7 +100,7 @@ export default function Projects() {
 
         <div className="projects-grid">
           {bentoShapes.map((size, i) => {
-            const p = PROJECTS[i]
+            const p = pageProjects[i]
             return (
             <div
               className={`project-card ${size}`}
@@ -119,6 +126,34 @@ export default function Projects() {
             )
           })}
         </div>
+
+        {pageCount > 1 && (
+          <div className="proj-pager mono">
+            <button
+              type="button"
+              className="proj-pager-arrow"
+              onClick={() => goToPage(page - 1)}
+              disabled={page === 0}
+              aria-label="Previous page"
+            >
+              &#8249;
+            </button>
+            <span className="proj-pager-num">
+              <span className="cur">{String(page + 1).padStart(2, '0')}</span>
+              <span className="slash">/</span>
+              {String(pageCount).padStart(2, '0')}
+            </span>
+            <button
+              type="button"
+              className="proj-pager-arrow"
+              onClick={() => goToPage(page + 1)}
+              disabled={page === pageCount - 1}
+              aria-label="Next page"
+            >
+              &#8250;
+            </button>
+          </div>
+        )}
       </div>
 
       {active && (
