@@ -59,7 +59,7 @@ function TagList({ tags, max }) {
   )
 }
 
-const PAGE_SIZE = 8
+const PAGE_SIZE = 10
 
 export default function Projects() {
   const [activeId, setActiveId] = useState(null)
