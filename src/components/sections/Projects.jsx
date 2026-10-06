@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { PROJECTS } from './projectsData'
 
-const BENTO_PATTERN = ['lg', 'md', 'sm', 'sm', 'md', 'sm']
+const BENTO_PATTERN = ['lg', 'tall', 'sm', 'md', 'sm', 'tall', 'sm', 'md']
 
 function TagList({ tags, max }) {
   const shown = max ? tags.slice(0, max) : tags

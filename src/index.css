@@ -2024,6 +2024,11 @@ section {
   grid-row: span 1;
 }
 
+.project-card.tall {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
 .project-card::before {
   content: '';
   position: absolute;
@@ -2075,7 +2080,8 @@ section {
 }
 
 .project-card.lg .project-card-content .desc,
-.project-card.md .project-card-content .desc {
+.project-card.md .project-card-content .desc,
+.project-card.tall .project-card-content .desc {
   display: block;
 }
 
@@ -2100,8 +2106,10 @@ section {
   .projects-grid { grid-template-columns: 1fr; grid-auto-rows: auto; }
   .project-card.lg,
   .project-card.md,
-  .project-card.sm {
+  .project-card.sm,
+  .project-card.tall {
     grid-column: span 1;
+    grid-row: span 1;
     min-height: 160px;
   }
 }
